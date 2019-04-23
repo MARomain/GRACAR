@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcdf3ad6083b449488806347c2cb22a9, type: 3}
-  m_Name: Romain_Test
+  m_Name: Romain
   m_EditorClassIdentifier: 
   main_scene: {fileID: 102900000, guid: 04abb93f0c891054b96849ae3278e1ec, type: 3}
   levelType: 1
