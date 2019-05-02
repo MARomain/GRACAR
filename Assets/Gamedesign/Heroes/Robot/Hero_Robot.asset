@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25005daa246ab794c95796a1f34c91c1, type: 3}
   m_Name: Hero_Robot
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
   sprintCameraSettings:
     FOVFactor: 0.93
     FOVInceraetSpeed: 1

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main_scene: {fileID: 102900000, guid: 108809feec77e4d4d9a279004a0bb7bf, type: 3}
   levelType: 1
+  includeInBuild: 0

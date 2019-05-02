@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df8fc6a522361a4581f3b23c6577d09, type: 3}
   m_Name: GameConfiguration
   m_EditorClassIdentifier: 
-  playerSpeed: 6
-  playerSprintSpeed: 8
+  playerSpeed: 12
+  playerSprintSpeed: 16
   playerAcceleration: 30
   playerFriction: 16
-  playerAiracceleration: 1
-  playerAirFriction: 0.5
+  playerAiracceleration: 2
+  playerAirFriction: 0
   playerGravity: 18
   easterBunny: 1
-  jumpAscentDuration: 0.3
-  jumpAscentHeight: 1
+  jumpAscentDuration: 0.6
+  jumpAscentHeight: 2
   maxFallVelocity: 50

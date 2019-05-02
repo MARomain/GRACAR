@@ -15,8 +15,8 @@ MonoBehaviour:
   settings:
     fireButton: 4
     reloadButton: 16
-    clipSize: 80
-    minFireRate: 2
+    clipSize: 500
+    minFireRate: 8
     maxFireRate: 8
     fireRateAcceleration: 6
     reloadDuration: 1.5
