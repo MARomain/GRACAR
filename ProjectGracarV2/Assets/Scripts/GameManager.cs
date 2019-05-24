@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         if (currentGameTimer <= 0)
         {
             
-            StartCoroutine(SwapFloor2());
+            //StartCoroutine(SwapFloor2());
             //swapFloorBool = true;
             timerBool = false;
             currentGameTimer = gameTimer;
