@@ -70,8 +70,8 @@ Shader "Custom/water" {
             float4 frag(VertexOutput i) : COLOR {
                 i.normalDir = normalize(i.normalDir);
                 float3 normalDirection = i.normalDir;
-                float4 node_8276 = _Time;
-                float2 node_3060 = (i.uv0+node_8276.g*float2(0.01,0.01));
+                float4 node_35 = _Time;
+                float2 node_3060 = (i.uv0+node_35.g*float2(0.01,0.01));
                 float4 _Texturenoise_var = tex2D(_Texturenoise,TRANSFORM_TEX(node_3060, _Texturenoise));
                 float2 sceneUVs = (i.projPos.xy / i.projPos.w) + (_Texturenoise_var.rgb.rg*_Refraction);
                 float4 sceneColor = tex2D(_GrabTexture, sceneUVs);
@@ -149,8 +149,8 @@ Shader "Custom/water" {
             float4 frag(VertexOutput i) : COLOR {
                 i.normalDir = normalize(i.normalDir);
                 float3 normalDirection = i.normalDir;
-                float4 node_5450 = _Time;
-                float2 node_3060 = (i.uv0+node_5450.g*float2(0.01,0.01));
+                float4 node_237 = _Time;
+                float2 node_3060 = (i.uv0+node_237.g*float2(0.01,0.01));
                 float4 _Texturenoise_var = tex2D(_Texturenoise,TRANSFORM_TEX(node_3060, _Texturenoise));
                 float2 sceneUVs = (i.projPos.xy / i.projPos.w) + (_Texturenoise_var.rgb.rg*_Refraction);
                 float4 sceneColor = tex2D(_GrabTexture, sceneUVs);
