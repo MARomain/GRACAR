@@ -73,9 +73,11 @@
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
     <Compile Include="Assets\test.cs" />
     <None Include="Assets\Shader\water_21.shader" />
+    <None Include="Assets\Shader\waterFoam_06.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Shader\water_04.shader" />
+    <None Include="Assets\Shader\waterFoam_07.shader" />
     <None Include="Assets\Shader\water_02.shader" />
     <None Include="Assets\Shader\water_19.shader" />
     <None Include="Assets\Shader\water_12.shader" />
@@ -90,7 +92,9 @@
     <None Include="Assets\Shader\water_08.shader" />
     <None Include="Assets\Shader\water_14.shader" />
     <None Include="Assets\Shader\water_17.shader" />
+    <None Include="Assets\Shader\waterFoam_09.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
+    <None Include="Assets\Shader\waterFoam_08.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\Parallax.shader" />
     <None Include="Assets\Shader\water_15.shader" />
     <None Include="Assets\Shader\water_11.shader" />
@@ -99,8 +103,11 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Shader\water_20.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Shader\waterFoam_05.shader" />
     <None Include="Assets\Shader\water_16.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Shader\waterFoam_04.shader" />
+    <None Include="Assets\Shader\waterFoam_02.shader" />
     <None Include="Assets\Shader\water_13.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\Shader\water_23.shader" />
@@ -112,6 +119,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Shader\water_07.shader" />
     <None Include="Assets\Shader\water_03.shader" />
+    <None Include="Assets\Shader\waterFoam_01.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
@@ -119,6 +127,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Shader\water_10.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Shader\waterFoam_03.shader" />
     <None Include="Assets\Shader\water_18.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
