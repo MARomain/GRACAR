@@ -18,18 +18,22 @@ public class killzone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player") // ce check evite juste "NullReferenceException" quand d'autres objets que le joueur touche le collider au if du dessous
+        Debug.Log(other.gameObject);
+        if (other.gameObject.tag == "Player") // ce check evite juste "NullReferenceException" quand d'autres objets que le joueur touche le collider au if du dessous
         {
-            if (other.gameObject.GetComponentInParent<Controller>().isActive == true)
+            if (other.gameObject.GetComponent<Controller>().isActive == true)
             {
                 return;
                 //LET HIM LIVE
             }
+
             else
             {
-                Destroy(other.gameObject);
+                Destroy(other.transform.parent.gameObject);
             }
+
         }
-        
+
+
     }
 }

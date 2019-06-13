@@ -43,6 +43,7 @@ public class Controller : MonoBehaviour
     private float speed;
     private Vector3 pointContact;
     private Vector3 bounceDirection;
+    public Bubble bubble;
 
 
 
@@ -188,7 +189,6 @@ public class Controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "Water" && isActive == true)
         {
-
             bounceDirection = Vector3.Reflect(baseVelocity, collision.GetContact(0).normal);
             rb.velocity = bounceDirection.normalized * Mathf.Max(speed, minBounce);
 
@@ -196,7 +196,6 @@ public class Controller : MonoBehaviour
             DesactivateBulle();
             Debug.Log("Speed : " + speed);
             Debug.Log("Out Direction: " + bounceDirection.normalized * Mathf.Max(speed, minBounce));
-
         }
     }
 
