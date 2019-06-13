@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 430389c61cffed34d9e139ebc2b3b59c, type: 3}
-        m_Scale: {x: 3, y: 3}
+        m_Scale: {x: 9, y: 9}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - __CausticNoise:
         m_Texture: {fileID: 2800000, guid: e9c4361ad0088434e97f1d204c71957a, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 6, y: 6}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
@@ -86,8 +86,8 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NormalBlendStrength: 0.56
-    - _NormalMap1Strength: 0.13
-    - _NormalMap2Strength: 0.1
+    - _NormalMap1Strength: 0.092
+    - _NormalMap2Strength: 0.055
     - _OcclusionStrength: 1
     - _Opacity: 0.65
     - _Parallax: 0.02
@@ -109,5 +109,5 @@ Material:
     - _ColorDeep: {r: 0, g: 1, b: 0.6710527, a: 1}
     - _ColorShallow: {r: 0.4, g: 0.8, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _UV1Animator: {r: -0.5, g: 0.5, b: 0, a: 0}
-    - _UV2Animator: {r: 0.5, g: -0.5, b: 0, a: 0}
+    - _UV1Animator: {r: -0.1, g: 0.1, b: 0, a: 0}
+    - _UV2Animator: {r: 0.1, g: -0.1, b: 0, a: 0}

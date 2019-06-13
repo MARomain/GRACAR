@@ -24,7 +24,7 @@ public class Controller : MonoBehaviour
     private int jumpCount;
 
     [Header("Shoot")]
-    public GameObject bulletRef;
+    public GameObject bubbleRef;
     public Transform gunPoint;
     public float shootForce;
 
@@ -35,7 +35,7 @@ public class Controller : MonoBehaviour
     [Header("Bubble")]
     public bool isActive;
     public GameObject bubbleGo;
-    public float minBounce;
+    public float Bounce;
     public bool bubbleBool;
     public float bubbleCd;
     private float bubbleTimer;
@@ -43,21 +43,21 @@ public class Controller : MonoBehaviour
     private float speed;
     private Vector3 pointContact;
     private Vector3 bounceDirection;
-    public Bubble bubble;
+    public Bubble bubbleScript;
 
 
 
-    private string fireButton;
     private string lookX;
     private string lookY;
     private string moveX;
     private string moveY;
     private string jump;
-    private string bulle;
+    private string bubble;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
     }
 
     // Start is called before the first frame update
@@ -67,13 +67,12 @@ public class Controller : MonoBehaviour
         if(spawnWithGun) SpawnWeapon();
 
 
-        fireButton = "Fire" + playerNumber;
         lookX = "HorizontalLook" + playerNumber;
         lookY = "VerticalLook" + playerNumber;
         moveX = "Horizontal" + playerNumber;
         moveY = "Vertical" + playerNumber;
         jump = "Jump" + playerNumber;
-        bulle = "Bulle" + playerNumber;
+        bubble = "Bubble" + playerNumber;
     }
 
     public void VarInit()
@@ -85,6 +84,8 @@ public class Controller : MonoBehaviour
     public void SpawnWeapon()
     {
         GameObject weapon = Instantiate(baseWeapon, weaponPosition);
+        weapon.GetComponent<TestWeapon>().playerNumber = playerNumber;
+        weapon.GetComponent<TestWeapon>().fireButton = "Fire" + playerNumber;
         weapon.transform.parent = transform;
         hasAGun = true;
     }
@@ -96,8 +97,8 @@ public class Controller : MonoBehaviour
         //Jump();
         Look();
         //Shoot();
-        BulleControl();
-        BulleCD();
+        BubbleControl();
+        BubbleCd();
 
 
         
@@ -161,11 +162,11 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void BulleControl()
+    public void BubbleControl()
     {
         if(bubbleBool)
         {
-            if (Input.GetAxis(bulle) > 0)
+            if (Input.GetAxis(bubble) > 0)
             {
                 isActive = true;
                 bubbleGo.SetActive(true);
@@ -173,13 +174,13 @@ public class Controller : MonoBehaviour
 
             else
             {
-                DesactivateBulle();
+                DesactivateBubble();
             }
         }
 
     }
 
-    public void DesactivateBulle()
+    public void DesactivateBubble()
     {
         isActive = false;
         bubbleGo.SetActive(false);
@@ -190,16 +191,14 @@ public class Controller : MonoBehaviour
         if (collision.gameObject.tag == "Water" && isActive == true)
         {
             bounceDirection = Vector3.Reflect(baseVelocity, collision.GetContact(0).normal);
-            rb.velocity = bounceDirection.normalized * Mathf.Max(speed, minBounce);
+            rb.velocity = bounceDirection.normalized * Bounce;
 
             bubbleBool = false;
-            DesactivateBulle();
-            Debug.Log("Speed : " + speed);
-            Debug.Log("Out Direction: " + bounceDirection.normalized * Mathf.Max(speed, minBounce));
+            DesactivateBubble();
         }
     }
 
-    public void BulleCD()
+    public void BubbleCd()
     {
         if(!bubbleBool)
         {

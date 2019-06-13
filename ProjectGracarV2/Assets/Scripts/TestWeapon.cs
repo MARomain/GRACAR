@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class TestWeapon : Weapon
 {
-    private string fireButton;
+    [HideInInspector] public string fireButton;
     public int playerNumber;
     private float nextFire;
     public Vector2 spread;
     public float horizontalSpread;
     public float verticalSpread;
+    private Controller controller;
 
     public TestWeapon(string name, int damage, int fireRate, GameObject bullet,float speed, Transform gunPoint) : base(name,damage,fireRate,bullet, speed, gunPoint)
     {
@@ -19,10 +20,7 @@ public class TestWeapon : Weapon
     // Start is called before the first frame update
     void Start()
     {
-        
-
-
-        fireButton = "Fire" + playerNumber;
+        controller = GetComponentInParent<Controller>();
     }
 
     // Update is called once per frame

@@ -8,6 +8,7 @@ public class bullet : MonoBehaviour
     Vector3 knockBackDirection;
     private Rigidbody rb;
     public float rebounceMultiplier;
+    private Vector3 oldVelocity;
 
     // Start is called before the first frame update
     void Start()
@@ -21,36 +22,42 @@ public class bullet : MonoBehaviour
         
     }
 
+    private void FixedUpdate()
+    {
+        oldVelocity = rb.velocity;
+    }
 
 
-  
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.transform.tag == "Player")
+        //get the point of contact
+        ContactPoint contact = collision.GetContact(0);
+        Debug.Log(collision.gameObject.tag);
+
+        if(collision.gameObject.tag == "Bubble")
         {
-            Controller controller = collision.gameObject.GetComponent<Controller>();
-            if(controller.isActive)
-            {
-                Vector3 bounceDirection = Vector3.Reflect(rb.velocity, collision.GetContact(0).normal);
-                Debug.DrawRay(transform.position, collision.GetContact(0).normal, Color.green);
-                rb.velocity = bounceDirection.normalized + rb.velocity * rebounceMultiplier;
-                Debug.Log(bounceDirection);
+            Vector3 bounceDirection = Vector3.Reflect(oldVelocity, contact.normal);
+            Debug.DrawRay(transform.position, collision.GetContact(0).normal, Color.green);
+            rb.velocity = bounceDirection * rebounceMultiplier;
+            Quaternion rotation = Quaternion.FromToRotation(oldVelocity, bounceDirection);
+            transform.rotation = rotation * transform.rotation;
+        }
+    
 
-            }
 
-            else if (controller.isActive == false)
-            {
-                Destroy(this.gameObject);
-                Rigidbody targetRb = collision.gameObject.GetComponentInParent<Rigidbody>();
-                knockBackDirection = transform.position - collision.transform.position;
-                targetRb.AddForce(knockBackDirection.normalized * 200f);
-                Debug.Log(transform.position - collision.transform.position);
-                Debug.Log("direction :" + knockBackDirection);
-            }
+
+
+                // si ça touche le player
+
+                //Destroy(this.gameObject);
+                //Rigidbody targetRb = collision.gameObject.GetComponentInParent<Rigidbody>();
+                //knockBackDirection = transform.position - collision.transform.position;
+                //targetRb.AddForce(knockBackDirection.normalized * 200f);
+                //Debug.Log(transform.position - collision.transform.position);
+                //Debug.Log("direction :" + knockBackDirection);
             
 
-        }
 
         
 

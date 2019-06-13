@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Bulle
   - Wall
+  - Bubble
   layers:
   - Default
   - TransparentFX

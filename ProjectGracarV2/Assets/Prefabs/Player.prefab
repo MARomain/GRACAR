@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5488503322628015188}
   m_Layer: 0
   m_Name: Bulle
-  m_TagString: Bulle
+  m_TagString: Bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,8 +304,7 @@ MonoBehaviour:
   rotationSpeed: 35
   jumpForce: 750
   jumpAmount: 1
-  bulletRef: {fileID: 8481376290186696572, guid: d7177d7fababd12459e094584b846a56,
-    type: 3}
+  bubbleRef: {fileID: 0}
   gunPoint: {fileID: 0}
   shootForce: 20
   baseWeapon: {fileID: 5677078911566920609, guid: 33640d9c103f3e346a62c0fd4aa40923,
@@ -313,7 +312,7 @@ MonoBehaviour:
   weaponPosition: {fileID: 5398640329920798944}
   isActive: 0
   bubbleGo: {fileID: 6477137082410629543}
-  minBounce: 8
+  Bounce: 8
   bubbleBool: 1
   bubbleCd: 1.5
-  bubble: {fileID: 5488503322628015188}
+  bubbleScript: {fileID: 0}

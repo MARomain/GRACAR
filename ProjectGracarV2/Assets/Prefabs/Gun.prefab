@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: BaseGun
   damage: 0
-  fireRate: 0.1
+  fireRate: 0.2
   bullet: {fileID: 8481376290186696572, guid: d7177d7fababd12459e094584b846a56, type: 3}
   speed: 10
   gunPoint: {fileID: 5514168932463141817}

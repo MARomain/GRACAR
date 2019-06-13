@@ -49,7 +49,7 @@ public class Bubble : MonoBehaviour
             rb.velocity = bounceDirection.normalized * Mathf.Max(speed, minBounce);
 
             bubbleBool = false;
-            controller.DesactivateBulle();
+            controller.DesactivateBubble();
             Debug.Log("Speed : " + speed);
             Debug.Log("Out Direction: " + bounceDirection.normalized * Mathf.Max(speed, minBounce));
         }
