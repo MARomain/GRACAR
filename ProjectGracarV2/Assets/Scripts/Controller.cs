@@ -146,7 +146,7 @@ public class Controller : MonoBehaviour
 
 
 
-        look = Vector3.Lerp(transform.forward, newDir, 1);
+        look = Vector3.Lerp(transform.forward, newDir, 1); // elle sert à rien cette ligne ? 
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(look), Time.deltaTime * rotationSpeed);
     }
 
@@ -159,19 +159,6 @@ public class Controller : MonoBehaviour
             Debug.Log(jumpCount);
         }
     }
-
-    private void Shoot()
-    {
-        if(Input.GetAxis(fireButton) > 0)
-        {
-            GameObject go = Instantiate(bulletRef, gunPoint.position, gunPoint.rotation);
-            Rigidbody shellInstance = go.GetComponent<Rigidbody>();
-
-            shellInstance.AddForce(shootForce * gunPoint.right,ForceMode.Impulse);
-            Destroy(go, 4f);
-        }
-    }
-
 
     public void BulleControl()
     {
