@@ -90,6 +90,7 @@
     <None Include="Assets\Shader\waterFoam_10.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
+    <None Include="Assets\Shader\Skybox 2.shader" />
     <None Include="Assets\Shader\water_06.shader" />
     <None Include="Assets\Shader\water_08.shader" />
     <None Include="Assets\Shader\water_14.shader" />
@@ -126,11 +127,13 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
+    <None Include="Assets\Shader\Skybox 1.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Shader\water 1.shader" />
     <None Include="Assets\Shader\water_10.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Shader\waterFoam_03.shader" />
+    <None Include="Assets\Shader\Skybox.shader" />
     <None Include="Assets\Shader\water_18.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
