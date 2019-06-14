@@ -6,6 +6,9 @@ public class Controller : MonoBehaviour
 {
     [Header("General")]
     public int playerNumber;
+    public GameObject dummyModel;
+    public GameObject[] playerModels;
+    public GameObject currentModel;
     private Rigidbody rb;
     public bool spawnWithGun;
     public bool hasAGun;
@@ -18,11 +21,6 @@ public class Controller : MonoBehaviour
     public float rotationSpeed;
     private Vector3 look;
 
-    [Header("Jump")]
-    public float jumpForce;
-    public int jumpAmount;
-    private int jumpCount;
-
     [Header("Shoot")]
     public GameObject bubbleRef;
     public Transform gunPoint;
@@ -31,6 +29,8 @@ public class Controller : MonoBehaviour
     [Header("Weapon")]
     public GameObject baseWeapon;
     public Transform weaponPosition;
+    public GameObject weaponInstance;
+    public TestWeapon weaponScript;
 
     [Header("Bubble")]
     public bool isActive;
@@ -51,7 +51,6 @@ public class Controller : MonoBehaviour
     private string lookY;
     private string moveX;
     private string moveY;
-    private string jump;
     private string bubble;
 
     private void Awake()
@@ -71,22 +70,28 @@ public class Controller : MonoBehaviour
         lookY = "VerticalLook" + playerNumber;
         moveX = "Horizontal" + playerNumber;
         moveY = "Vertical" + playerNumber;
-        jump = "Jump" + playerNumber;
         bubble = "Bubble" + playerNumber;
+
+        //Selection du bon skin
+        currentModel = playerModels[playerNumber - 1];
+        Instantiate(currentModel, this.transform);
+        //Destruction de l'ancienne modé
+        Destroy(dummyModel);
+
     }
 
     public void VarInit()
     {
-        jumpCount = jumpAmount;
         bubbleTimer = bubbleCd;
     }
 
     public void SpawnWeapon()
     {
-        GameObject weapon = Instantiate(baseWeapon, weaponPosition);
-        weapon.GetComponent<TestWeapon>().playerNumber = playerNumber;
-        weapon.GetComponent<TestWeapon>().fireButton = "Fire" + playerNumber;
-        weapon.transform.parent = transform;
+        weaponInstance = Instantiate(baseWeapon, weaponPosition);
+        weaponScript = weaponInstance.GetComponent<TestWeapon>();
+        weaponScript.playerNumber = playerNumber;
+        weaponScript.fireButton = "Fire" + playerNumber;
+        weaponInstance.transform.parent = transform;
         hasAGun = true;
     }
 
@@ -94,9 +99,7 @@ public class Controller : MonoBehaviour
     void Update()
     {
         Move();
-        //Jump();
         Look();
-        //Shoot();
         BubbleControl();
         BubbleCd();
 
@@ -112,12 +115,6 @@ public class Controller : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //JUMP STUFF
-        if (collision.gameObject.tag == "Ground")
-        {
-            jumpCount++;
-        }
-
         //BUBBLE BOUNCE STUFF
         pointContact = collision.GetContact(0).point;
         Bubble(collision.GetContact(0).normal, collision);
@@ -152,15 +149,6 @@ public class Controller : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(look), Time.deltaTime * rotationSpeed);
     }
 
-    private void Jump()
-    {
-        if (Input.GetButtonDown(jump) && jumpCount > 0)
-        {
-            rb.AddForce(Vector3.up * jumpForce * Time.deltaTime,ForceMode.Impulse);
-            jumpCount--;
-            Debug.Log(jumpCount);
-        }
-    }
 
     public void BubbleControl()
     {
@@ -168,8 +156,7 @@ public class Controller : MonoBehaviour
         {
             if (Input.GetAxis(bubble) > 0)
             {
-                isActive = true;
-                bubbleGo.SetActive(true);
+                ActivateBubble();
             }
 
             else
@@ -180,10 +167,20 @@ public class Controller : MonoBehaviour
 
     }
 
+    public void ActivateBubble()
+    {
+        isActive = true;
+        bubbleGo.SetActive(true);
+        //le joueur ne peut plus tirer quand la bulle est active
+        weaponScript.canShoot = false;
+    }
+
     public void DesactivateBubble()
     {
         isActive = false;
         bubbleGo.SetActive(false);
+        //le joueur peut à nouveau tirer
+        weaponScript.canShoot = true;
     }
 
     public void Bubble(Vector3 collisionNormal, Collision collision)

@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501dfcb1a676a3245b1328c75887c641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackAmount: 50
   rebounceMultiplier: 1
 --- !u!65 &7998898691843139992
 BoxCollider:

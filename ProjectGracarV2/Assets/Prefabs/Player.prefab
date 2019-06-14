@@ -300,7 +300,7 @@ MonoBehaviour:
   playerNumber: 1
   spawnWithGun: 0
   hasAGun: 0
-  moveSpeed: 12
+  moveSpeed: 8
   rotationSpeed: 35
   jumpForce: 750
   jumpAmount: 1

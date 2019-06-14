@@ -7,6 +7,7 @@ public class bullet : MonoBehaviour
 
     Vector3 knockBackDirection;
     private Rigidbody rb;
+    public float knockbackAmount;
     public float rebounceMultiplier;
     private Vector3 oldVelocity;
 
@@ -57,7 +58,7 @@ public class bullet : MonoBehaviour
                 Rigidbody targetRb = collision.gameObject.GetComponentInParent<Rigidbody>();
                 Debug.DrawRay(contact.point, contact.normal * 10f, Color.red, 100f);
                 knockBackDirection = -contact.normal;
-                targetRb.AddForce(knockBackDirection.normalized * 200f);
+                targetRb.AddForce(knockBackDirection.normalized * knockbackAmount);
             }
 
         }

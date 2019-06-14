@@ -12,7 +12,7 @@ public class TestWeapon : Weapon
     public float verticalSpread;
     private Controller controller;
 
-    public TestWeapon(string name, int damage, int fireRate, GameObject bullet,float speed, Transform gunPoint) : base(name,damage,fireRate,bullet, speed, gunPoint)
+    public TestWeapon(string name, int damage, int fireRate, GameObject bullet,float speed, Transform gunPoint, bool canShoot) : base(name,damage,fireRate,bullet, speed, gunPoint, canShoot)
     {
 
     }
@@ -34,18 +34,21 @@ public class TestWeapon : Weapon
         spread.x = Random.Range(-verticalSpread, verticalSpread);
         spread.y = Random.Range(-horizontalSpread, horizontalSpread);
 
-        if (Input.GetAxis(fireButton) > 0 && Time.time > nextFire)
+        if(canShoot == true)
         {
-            nextFire = Time.time + fireRate;
+            if (Input.GetAxis(fireButton) > 0 && Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
 
-            GameObject bulletInstance = Instantiate(bullet, gunPoint.position, gunPoint.rotation);
+                GameObject bulletInstance = Instantiate(bullet, gunPoint.position, gunPoint.rotation);
 
-            bulletInstance.transform.Rotate(spread.x, spread.y, transform.rotation.z, Space.Self);
+                bulletInstance.transform.Rotate(spread.x, spread.y, transform.rotation.z, Space.Self);
 
-            Rigidbody instanceRb = bulletInstance.GetComponent<Rigidbody>();
-            instanceRb.AddForce(speed * Time.deltaTime * bulletInstance.transform.forward, ForceMode.Impulse);
+                Rigidbody instanceRb = bulletInstance.GetComponent<Rigidbody>();
+                instanceRb.AddForce(speed * Time.deltaTime * bulletInstance.transform.forward, ForceMode.Impulse);
 
-            Destroy(bulletInstance, 4f);
+                Destroy(bulletInstance, 4f);
+            }
         }
     }
 }
