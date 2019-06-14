@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FoamTexture:
         m_Texture: {fileID: 2800000, guid: ef0afd54e6c32454486f77e0a58559a9, type: 3}
-        m_Scale: {x: 8, y: 8}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 430389c61cffed34d9e139ebc2b3b59c, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - __CausticNoise:
         m_Texture: {fileID: 2800000, guid: e9c4361ad0088434e97f1d204c71957a, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
@@ -95,8 +95,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _UV1Tiling: 1
-    - _UV2Tiling: 2
+    - _UV1Tiling: 10
+    - _UV2Tiling: 10
     - _UVScale: 20
     - _UVSec: 0
     - _ZWrite: 1
