@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3481796218361454546}
   - component: {fileID: 3481796218358587390}
   - component: {fileID: 3481796218359553342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3481796218361480178}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3481796218361454552}
   - component: {fileID: 3481796218358587386}
   - component: {fileID: 3481796218359553338}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3481796218361480184}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3481796218361454554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CacheOeil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,9 +196,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3481796218361454556}
   - component: {fileID: 7516915788215950966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: P1 mode
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 3481796218361454558}
   - component: {fileID: 3481796218358587384}
   - component: {fileID: 3481796218359553336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3481796218361480190}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1

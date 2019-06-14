@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2447661023691723841}
   - component: {fileID: 2447661023688299629}
   - component: {fileID: 2447661023689430701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pPlane2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2447661023691723843}
   - component: {fileID: 2447661023688299631}
   - component: {fileID: 2447661023689430703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pPlane3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 2447661023691723845}
   - component: {fileID: 2447661023688299617}
   - component: {fileID: 2447661023689430689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pSphere1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2447661023691723849}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bandana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 2447661023691723851}
   - component: {fileID: 2447661023688299625}
   - component: {fileID: 2447661023689430697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 2447661023691723853}
   - component: {fileID: 2447661023688299627}
   - component: {fileID: 2447661023689430699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,9 +429,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2447661023691723855}
   - component: {fileID: 951879116134414335}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: P3 mode
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
