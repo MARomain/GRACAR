@@ -3,14 +3,14 @@ guid: 4659b340751ce2b459b61e857150d1fb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: chest2
-    100002: //RootNode
-    400000: chest2
-    400002: //RootNode
-    2100000: chest2Mat
-    2300000: chest2
-    3300000: chest2
-    4300000: chest2
+    100000: //RootNode
+    100002: coffre
+    400000: //RootNode
+    400002: coffre
+    2100000: coffreMat
+    2300000: coffre
+    3300000: coffre
+    4300000: coffre
   externalObjects: {}
   materials:
     importMaterials: 1
