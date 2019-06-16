@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib chest_l.mtl
+mtllib chest.mtl
 g default
 v -155.811188 0.554539 98.505585
 v -3.356667 0.554539 98.505585
