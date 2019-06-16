@@ -1,15 +1,13 @@
 fileFormatVersion: 2
-guid: 1a19a1f174f0d5d49994f57e033b7d5a
+guid: 273fe830495dc964f95aeaf184ef2935
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: rock1_low
-    100002: //RootNode
-    400000: rock1_low
-    400002: //RootNode
-    2100000: rock1_lowMat
-    2300000: rock1_low
-    3300000: rock1_low
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: rock1_low
   externalObjects: {}
   materials:
