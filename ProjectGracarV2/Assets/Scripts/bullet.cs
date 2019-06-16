@@ -7,8 +7,8 @@ public class bullet : MonoBehaviour
 
     Vector3 knockBackDirection;
     private Rigidbody rb;
-    public float knockbackAmount;
-    public float rebounceMultiplier;
+    private float knockbackAmount;
+    private float bubbleDamage;
     private Vector3 oldVelocity;
 
     // Start is called before the first frame update
@@ -28,7 +28,11 @@ public class bullet : MonoBehaviour
         oldVelocity = rb.velocity;
     }
 
-
+    public void Initialize(float knockbackAmount, float bubbleDamage)
+    {
+        this.knockbackAmount = knockbackAmount;
+        this.bubbleDamage = bubbleDamage;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -40,13 +44,14 @@ public class bullet : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Controller controller = collision.gameObject.GetComponent<Controller>();
-
             //si la bulle est active
             if(controller.isActive == true)
             {
+                controller.bubbleHealth -= bubbleDamage;
+
                 Vector3 bounceDirection = Vector3.Reflect(oldVelocity, contact.normal);
                 Debug.DrawRay(transform.position, collision.GetContact(0).normal, Color.green);
-                rb.velocity = bounceDirection * rebounceMultiplier;
+                rb.velocity = bounceDirection;
                 Quaternion rotation = Quaternion.FromToRotation(oldVelocity, bounceDirection);
                 transform.rotation = rotation * transform.rotation;
             }

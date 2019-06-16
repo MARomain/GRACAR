@@ -14,10 +14,12 @@ public class Controller : MonoBehaviour
     public bool hasAGun;
 
     [Header("Movement")]
+    public bool canMove = true;
     public float moveSpeed;
     private Vector3 movement;
 
     [Header("Look")]
+    public bool canLook = true;
     public float rotationSpeed;
     private Vector3 look;
 
@@ -33,6 +35,10 @@ public class Controller : MonoBehaviour
     public TestWeapon weaponScript;
 
     [Header("Bubble")]
+    public float maxBubbleHealth = 3f;
+    public float bubbleHealth = 3f;
+    public float regeneration = 0.5f;
+    public float bubbleDamageOnWater = 1f;
     public bool isActive;
     public GameObject bubbleGo;
     public float Bounce;
@@ -43,8 +49,6 @@ public class Controller : MonoBehaviour
     private float speed;
     private Vector3 pointContact;
     private Vector3 bounceDirection;
-    public Bubble bubbleScript;
-
 
 
     private string lookX;
@@ -56,7 +60,6 @@ public class Controller : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
     }
 
     // Start is called before the first frame update
@@ -102,9 +105,7 @@ public class Controller : MonoBehaviour
         Look();
         BubbleControl();
         BubbleCd();
-
-
-        
+        RegeneRateBubble();
     }
 
     private void FixedUpdate()
@@ -123,30 +124,36 @@ public class Controller : MonoBehaviour
 
     private void Move()
     {
-        float verticalAxisValue = Input.GetAxis(moveY);
-        float horizontalAxisValue = Input.GetAxis(moveX);
+        if(canMove)
+        {
+            float verticalAxisValue = Input.GetAxis(moveY);
+            float horizontalAxisValue = Input.GetAxis(moveX);
 
-        
-        movement.Set(horizontalAxisValue, 0f, verticalAxisValue);
-        movement = movement.normalized * moveSpeed * Time.deltaTime;
 
-        rb.MovePosition(transform.position + movement);
+            movement.Set(horizontalAxisValue, 0f, verticalAxisValue);
+            movement = movement.normalized * moveSpeed * Time.deltaTime;
+
+            rb.MovePosition(transform.position + movement);
+        }
     }
 
     private void Look()
     {
-        float lookXValue = Input.GetAxis(lookX);
-        float lookYValue = Input.GetAxis(lookY);
+        if(canLook)
+        {
+            float lookXValue = Input.GetAxis(lookX);
+            float lookYValue = Input.GetAxis(lookY);
 
-        Vector3 lookVector = new Vector3(lookXValue, 0, lookYValue);
-        float VectorLenght = Vector3.Magnitude(lookVector);
-        float step = rotationSpeed * Time.deltaTime;
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, lookVector, step, 0.0f);
+            Vector3 lookVector = new Vector3(lookXValue, 0, lookYValue);
+            float VectorLenght = Vector3.Magnitude(lookVector);
+            float step = rotationSpeed * Time.deltaTime;
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, lookVector, step, 0.0f);
 
 
 
-        look = Vector3.Lerp(transform.forward, newDir, 1); // elle sert à rien cette ligne ? 
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(look), Time.deltaTime * rotationSpeed);
+            look = Vector3.Lerp(transform.forward, newDir, 1); // elle sert à rien cette ligne ? 
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(look), Time.deltaTime * rotationSpeed);
+        }
     }
 
 
@@ -173,6 +180,8 @@ public class Controller : MonoBehaviour
         bubbleGo.SetActive(true);
         //le joueur ne peut plus tirer quand la bulle est active
         weaponScript.canShoot = false;
+        canMove = false;
+        canLook = false;
     }
 
     public void DesactivateBubble()
@@ -181,6 +190,8 @@ public class Controller : MonoBehaviour
         bubbleGo.SetActive(false);
         //le joueur peut à nouveau tirer
         weaponScript.canShoot = true;
+        canMove = true;
+        canLook = true;
     }
 
     public void Bubble(Vector3 collisionNormal, Collision collision)
@@ -191,6 +202,7 @@ public class Controller : MonoBehaviour
             rb.velocity = bounceDirection.normalized * Bounce;
 
             bubbleBool = false;
+            bubbleHealth -= bubbleDamageOnWater;
             DesactivateBubble();
         }
     }
@@ -208,5 +220,22 @@ public class Controller : MonoBehaviour
             }
         }
     }
+
+    public void RegeneRateBubble()
+    {
+        if (isActive == false && bubbleHealth <= maxBubbleHealth)
+        {
+            bubbleHealth += regeneration * Time.deltaTime;
+        }
+
+        if (bubbleHealth >= maxBubbleHealth) bubbleHealth = maxBubbleHealth;
+    }
+
+
+    //actuellement les HP de la bulles ne servent à rien
+    //a voir niveau GD quoi en faire
+    //pareil faire qu'on peut regen après 2 secondes ? 
+    //pareil on regen la bulle que quand on tue des mecs ? 
+    //pareil un pickup ? 
 
 }

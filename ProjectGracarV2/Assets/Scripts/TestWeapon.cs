@@ -11,8 +11,10 @@ public class TestWeapon : Weapon
     public float horizontalSpread;
     public float verticalSpread;
     private Controller controller;
+    public float knockbackAmount;
+    public float bubbleDamage;
 
-    public TestWeapon(string name, int damage, int fireRate, GameObject bullet,float speed, Transform gunPoint, bool canShoot) : base(name,damage,fireRate,bullet, speed, gunPoint, canShoot)
+    public TestWeapon(string name,float fireRate, GameObject bullet,float speed, Transform gunPoint, bool canShoot) : base(name,fireRate,bullet, speed, gunPoint, canShoot)
     {
 
     }
@@ -42,6 +44,7 @@ public class TestWeapon : Weapon
 
                 GameObject bulletInstance = Instantiate(bullet, gunPoint.position, gunPoint.rotation);
 
+                bulletInstance.GetComponent<bullet>().Initialize(knockbackAmount, bubbleDamage);
                 bulletInstance.transform.Rotate(spread.x, spread.y, transform.rotation.z, Space.Self);
 
                 Rigidbody instanceRb = bulletInstance.GetComponent<Rigidbody>();
