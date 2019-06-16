@@ -6,6 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("General")]
+    public GameObject[] players;
+    public float player1Score;
+    public float player2Score;
+    public float player3Score;
+    public float player4Score;
+    public TextMeshProUGUI[] playersScoreText;
+
+    [Header("Respawns")]
+    public Transform[] spawnPoints;
+
+    [Header("Chest")]
+    public int playerInControl;
+
     public bool timerBool;
     public TextMeshProUGUI timerText;
     public float gameTimer;
@@ -54,9 +68,20 @@ public class GameManager : MonoBehaviour
     //Ca lance une fonction dans le gameManager pour le faire respawn
     //
 
+    public void Respawn(int playerNumber)
+    {
+        players[playerNumber - 1].transform.position = spawnPoints[ChooseSpawnPoint()].position;
+    }
 
+    public int ChooseSpawnPoint()
+    {
+        return Random.Range(0, spawnPoints.Length);
+    }
 
+    public void UpdateScore()
+    {
 
+    }
 
 
 
@@ -140,11 +165,6 @@ public class GameManager : MonoBehaviour
         return go.transform.position;
     }
 
-
-    public void RespawnPlayers()
-    {
-
-    }
 
     public void RestartGame()
     {

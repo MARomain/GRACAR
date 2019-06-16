@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class killzone : MonoBehaviour
 {
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +20,11 @@ public class killzone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
+        Debug.Log(other.gameObject.name + " a touché la killzone");
         if (other.gameObject.tag == "Player") // ce check evite juste "NullReferenceException" quand d'autres objets que le joueur touche le collider au if du dessous
         {
-            if (other.gameObject.GetComponentInParent<Controller>().isActive == true)
+            Controller controller = other.gameObject.GetComponentInParent<Controller>();
+            if (controller.isActive == true)
             {
                 return;
                 //LET HIM LIVE
@@ -29,7 +32,8 @@ public class killzone : MonoBehaviour
 
             else
             {
-                Destroy(other.transform.parent.gameObject);
+                //Destroy(other.transform.parent.gameObject);
+                gameManager.Respawn(controller.playerNumber);
             }
         }
 
