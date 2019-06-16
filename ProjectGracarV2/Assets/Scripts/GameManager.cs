@@ -36,10 +36,37 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameTimer();
-        Swapfloor();
+        //GameTimer();
+        //Swapfloor();
         RestartGame();
     }
+
+
+    //Code du spawn selon 3 étape : 
+    //Un coffre fix avec des points de spawn fix, les joueurs respawn sur un point de spawn choisi aléatoirement
+    //Un coffre dynamique avec des points de spawns adapté selon la position du coffre, les joueurs respawn sur un point de spawn choisi aléatoirement
+    //Un coffre dynamique avec des points de spawns adapté selon la position du coffre, les joueurs respawn selon ou sont les autres joueurs (dans un endroit solo)
+
+
+
+
+    //Quand un joueur meurs
+    //Ca lance une fonction dans le gameManager pour le faire respawn
+    //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void GameTimer()
     {
