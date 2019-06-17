@@ -9,7 +9,7 @@ public class Controller : MonoBehaviour
     public GameObject dummyModel;
     public GameObject[] playerModels;
     public GameObject currentModel;
-    private Rigidbody rb;
+    public Rigidbody rb;
     public bool spawnWithGun;
     public bool hasAGun;
 

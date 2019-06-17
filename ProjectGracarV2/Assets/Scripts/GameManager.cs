@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     public void Respawn(int playerNumber)
     {
         players[playerNumber - 1].transform.position = spawnPoints[ChooseSpawnPoint()].position;
+        players[playerNumber - 1].GetComponent<Controller>().rb.velocity = Vector3.zero;
     }
 
     public int ChooseSpawnPoint()
