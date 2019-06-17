@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8958726411600174977}
+  - component: {fileID: 2421682214482485536}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30,3 +31,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2421682214482485536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421682214482485535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3561d6e8f5bca4a4bb116689747b80cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  player1Score: 0
+  player2Score: 0
+  player3Score: 0
+  player4Score: 0
+  playersScoreText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerInControl: 0
+  timerBool: 0
+  timerText: {fileID: 0}
+  gameTimer: 3
+  cam: {fileID: 0}
+  camElevation:
+  - {fileID: 0}
+  - {fileID: 0}
+  floorGo:
+  - {fileID: 0}
+  - {fileID: 0}
+  water: {fileID: 0}
+  swapFloorBool: 0
+  timeChangeFloor: 5
+  currentTime: 0
