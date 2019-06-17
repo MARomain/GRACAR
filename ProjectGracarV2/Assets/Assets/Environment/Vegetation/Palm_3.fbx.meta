@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 075e1483e595c4a4c8ef86bc88209cdc
+guid: 74e1650748f887248bdc3baa8835370b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Leaf8
+    100000: Leaf14
     100002: //RootNode
-    100004: TubeMesh2
-    400000: Leaf8
+    100004: TubeMesh4
+    400000: Leaf14
     400002: //RootNode
-    400004: TubeMesh2
+    400004: TubeMesh4
     2100000: palm
     2100002: bois
-    2300000: Leaf8
-    2300002: TubeMesh2
-    3300000: Leaf8
-    3300002: TubeMesh2
-    4300000: Leaf8
-    4300002: TubeMesh2
+    2300000: Leaf14
+    2300002: TubeMesh4
+    3300000: Leaf14
+    3300002: TubeMesh4
+    4300000: Leaf14
+    4300002: TubeMesh4
   externalObjects:
   - first:
       type: UnityEngine:Material

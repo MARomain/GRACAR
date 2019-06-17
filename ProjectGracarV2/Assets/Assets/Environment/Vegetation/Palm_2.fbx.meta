@@ -27,7 +27,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: palm
-    second: {fileID: 2100000, guid: 24123085688a85f468f193cbc9c758b2, type: 2}
+    second: {fileID: 2100000, guid: ee8ffc050c13a904f850239a5a57c754, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
