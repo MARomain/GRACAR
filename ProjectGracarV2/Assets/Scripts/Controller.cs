@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour
     public bool hasAGun;
 
     [Header("Movement")]
+    public bool doesBubbleStopMovement; // cette variable est seulement utile pour des tests
     public bool canMove = true;
     public float moveSpeed;
     private Vector3 movement;
@@ -180,8 +181,11 @@ public class Controller : MonoBehaviour
         bubbleGo.SetActive(true);
         //le joueur ne peut plus tirer quand la bulle est active
         weaponScript.canShoot = false;
-        canMove = false;
-        canLook = false;
+        if(doesBubbleStopMovement == true)
+        {
+            canMove = false;
+            canLook = false;
+        }
     }
 
     public void DesactivateBubble()
