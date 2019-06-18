@@ -89,7 +89,7 @@ Material:
     - _NormalMap1Strength: 0.046
     - _NormalMap2Strength: 0.026
     - _OcclusionStrength: 1
-    - _Opacity: 0.502
+    - _Opacity: 0.595
     - _Parallax: 0.02
     - _Refraction: 0.063
     - _SmoothnessTextureChannel: 0
