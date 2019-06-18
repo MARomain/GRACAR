@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public float gameTimer;
     private float currentGameTimer;
 
+    
+
     public Camera cam;
     public Transform[] camElevation;
     public GameObject[] floorGo;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InitVar();
+        SetTextColors();
     }
 
     public void InitVar()
@@ -47,10 +50,18 @@ public class GameManager : MonoBehaviour
         currentGameTimer = gameTimer;
     }
 
+    public void SetTextColors()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            playersScoreText[i].color = players[i].GetComponent<Controller>().playerColor;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //GameTimer();
+        GameTimer();
         //Swapfloor();
         RestartGame();
     }
@@ -99,18 +110,22 @@ public class GameManager : MonoBehaviour
         if(timerBool)
         {
             currentGameTimer -= Time.deltaTime;
-            timerText.text = currentGameTimer.ToString("F2") + " s";
 
+            float minutes = Mathf.Floor(currentGameTimer / 60);
+            float seconds = Mathf.RoundToInt(currentGameTimer % 60);
+            timerText.text = minutes.ToString("F0") + " : " + seconds.ToString("F0");
         }
 
         if (currentGameTimer <= 0)
         {
-            
+
             //StartCoroutine(SwapFloor2());
             //swapFloorBool = true;
-            timerBool = false;
-            currentGameTimer = gameTimer;
-            timerText.text = "0s";
+            //timerBool = false;
+            //currentGameTimer = gameTimer;
+            //timerText.text = "0s";
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

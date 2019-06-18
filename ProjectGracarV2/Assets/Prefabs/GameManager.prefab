@@ -65,7 +65,7 @@ MonoBehaviour:
   playerInControl: 0
   timerBool: 0
   timerText: {fileID: 0}
-  gameTimer: 3
+  gameTimer: 120
   cam: {fileID: 0}
   camElevation:
   - {fileID: 0}

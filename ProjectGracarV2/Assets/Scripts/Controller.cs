@@ -1,22 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
     [Header("General")]
     public int playerNumber;
+    public Color playerColor;
     public GameObject dummyModel;
     public GameObject[] playerModels;
     public GameObject currentModel;
     public Rigidbody rb;
     public bool spawnWithGun;
     public bool hasAGun;
+    public bool isGrounded;
+    public float groundCheckLenght;
+
 
     [Header("Movement")]
     public bool doesBubbleStopMovement; // cette variable est seulement utile pour des tests
+    public bool doesBubbleSlowMovement; //cette variable est seulement utile pour des tests
     public bool canMove = true;
     public float moveSpeed;
+    public float baseMoveSpeed;
+    public float moveSpeedBubble;
     private Vector3 movement;
 
     [Header("Look")]
@@ -36,7 +44,9 @@ public class Controller : MonoBehaviour
     public TestWeapon weaponScript;
 
     [Header("Bubble")]
+    public float bubbleActiveTime = 1f;
     public float maxBubbleHealth = 3f;
+    public Slider sliderBubble;
     public float bubbleHealth = 3f;
     public float regeneration = 0.5f;
     public float bubbleDamageOnWater = 1f;
@@ -69,6 +79,7 @@ public class Controller : MonoBehaviour
         VarInit();
         if(spawnWithGun) SpawnWeapon();
 
+        groundCheckLenght = 0.2f; // distance qui part des pieds du joueurs, longueur raycast
 
         lookX = "HorizontalLook" + playerNumber;
         lookY = "VerticalLook" + playerNumber;
@@ -107,6 +118,33 @@ public class Controller : MonoBehaviour
         BubbleControl();
         BubbleCd();
         RegeneRateBubble();
+        CheckGrounded();
+
+        //for (int i = 1; i < 5; i++)
+        //{
+        //    Debug.Log(i);
+        //    if (Mathf.Abs(Input.GetAxis("Horizontal" + i)) > 0.2 ||
+        //        Mathf.Abs(Input.GetAxis("Horizontal" + i)) > 0.2 ||
+        //        Mathf.Abs(Input.GetAxis("Horizontal" + i)) > 0.2 ||
+        //        Mathf.Abs(Input.GetAxis("Horizontal" + i)) > 0.2)
+        //    {
+        //        //Debug.Log(Input.GetJoystickNames()[i] + " is moved");
+        //    }
+        //}
+    }
+
+    public void CheckGrounded()
+    {
+        Vector3 origin = transform.position + new Vector3(0f, 0.8f, 0f);
+        float distance = groundCheckLenght + 0.8f;
+        Vector3 down = transform.TransformDirection(Vector3.down * distance);
+        Debug.DrawRay(origin, down, Color.red);
+        if (Physics.Raycast(origin, Vector3.down, distance, 9)) //oblige de faire partir le raycast d'un peu au dessus, sinon il part depuis les pieds et a pas le temps de toucher le sol
+        {
+            isGrounded = true;
+        }
+
+        else isGrounded = false;
     }
 
     private void FixedUpdate()
@@ -132,7 +170,7 @@ public class Controller : MonoBehaviour
 
 
             movement.Set(horizontalAxisValue, 0f, verticalAxisValue);
-            movement = movement.normalized * moveSpeed * Time.deltaTime;
+            movement = movement * moveSpeed * Time.deltaTime;
 
             rb.MovePosition(transform.position + movement);
         }
@@ -162,14 +200,14 @@ public class Controller : MonoBehaviour
     {
         if(bubbleBool)
         {
-            if (Input.GetAxis(bubble) > 0)
+            if (Input.GetAxis(bubble) > 0 && isActive == false && bubbleHealth > 0)
             {
                 ActivateBubble();
             }
 
             else
             {
-                DesactivateBubble();
+                //DesactivateBubble();
             }
         }
 
@@ -181,11 +219,27 @@ public class Controller : MonoBehaviour
         bubbleGo.SetActive(true);
         //le joueur ne peut plus tirer quand la bulle est active
         weaponScript.canShoot = false;
+
+        bubbleHealth--;
+        sliderBubble.value = bubbleHealth;
         if(doesBubbleStopMovement == true)
         {
             canMove = false;
             canLook = false;
         }
+
+        if(doesBubbleSlowMovement == true && isGrounded == true)
+        {
+            moveSpeed = moveSpeedBubble;
+        }
+
+        StartCoroutine(DesactivateBubbleAfterXSec(bubbleActiveTime));
+    }
+
+    public IEnumerator DesactivateBubbleAfterXSec(float timing)
+    {
+        yield return new WaitForSeconds(timing);
+        DesactivateBubble();
     }
 
     public void DesactivateBubble()
@@ -196,6 +250,7 @@ public class Controller : MonoBehaviour
         weaponScript.canShoot = true;
         canMove = true;
         canLook = true;
+        moveSpeed = baseMoveSpeed;
     }
 
     public void Bubble(Vector3 collisionNormal, Collision collision)
@@ -206,7 +261,8 @@ public class Controller : MonoBehaviour
             rb.velocity = bounceDirection.normalized * Bounce;
 
             bubbleBool = false;
-            bubbleHealth -= bubbleDamageOnWater;
+            //bubbleHealth -= bubbleDamageOnWater;
+            //sliderBubble.value = bubbleHealth;
             DesactivateBubble();
         }
     }
@@ -230,9 +286,14 @@ public class Controller : MonoBehaviour
         if (isActive == false && bubbleHealth <= maxBubbleHealth)
         {
             bubbleHealth += regeneration * Time.deltaTime;
+            sliderBubble.value = bubbleHealth;
         }
 
-        if (bubbleHealth >= maxBubbleHealth) bubbleHealth = maxBubbleHealth;
+        if (bubbleHealth >= maxBubbleHealth)
+        {
+            bubbleHealth = maxBubbleHealth;
+            sliderBubble.value = bubbleHealth;
+        }
     }
 
 
