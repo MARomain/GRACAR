@@ -71,7 +71,7 @@ Material:
     - _BumpScale: 1
     - _ColorFresnel: 0.38
     - _Cutoff: 0.5
-    - _Depth: 2.7
+    - _Depth: 2.44
     - _DepthMax: 1
     - _DepthMin: 0.502
     - _DetailNormalMapScale: 1
@@ -86,12 +86,12 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NormalBlendStrength: 0.56
-    - _NormalMap1Strength: 0.059
-    - _NormalMap2Strength: 0.016
+    - _NormalMap1Strength: 0.046
+    - _NormalMap2Strength: 0.026
     - _OcclusionStrength: 1
-    - _Opacity: 0.65
+    - _Opacity: 0.502
     - _Parallax: 0.02
-    - _Refraction: 0.05
+    - _Refraction: 0.063
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -99,7 +99,7 @@ Material:
     - _UV2Tiling: 2
     - _UVScale: 100
     - _UVSec: 0
-    - _VertexOffset: 1
+    - _VertexOffset: 0.75
     - _ZWrite: 1
     - __CausticsOpacity: 1
     - __CausticsThickness: 0.757
