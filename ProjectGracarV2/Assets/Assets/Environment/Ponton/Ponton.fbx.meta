@@ -4,16 +4,32 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Planches
+    100004: Poteaux
     400000: //RootNode
+    400002: Planches
+    400004: Poteaux
     2100000: lambert1
+    2100002: lambert2
     2300000: //RootNode
+    2300002: Planches
+    2300004: Poteaux
     3300000: //RootNode
+    3300002: Planches
+    3300004: Poteaux
     4300000: Ponton
+    4300002: Planches
+    4300004: Poteaux
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
+    second: {fileID: 2100000, guid: cfa0491ff3921b5479fa78ea1d214de8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
     second: {fileID: 2100000, guid: cfa0491ff3921b5479fa78ea1d214de8, type: 2}
   materials:
     importMaterials: 1

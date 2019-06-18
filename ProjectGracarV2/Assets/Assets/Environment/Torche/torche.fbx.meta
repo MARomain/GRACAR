@@ -26,10 +26,19 @@ ModelImporter:
     400018: transform3
     400020: transform4
     2100000: lambert1
+    2100002: lambert4
     2300000: group3
+    2300002: //RootNode
     3300000: group3
+    3300002: //RootNode
     4300000: group3
-  externalObjects: {}
+    4300002: Torche
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: 82edb454d309a3343963fe0ab6185807, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
