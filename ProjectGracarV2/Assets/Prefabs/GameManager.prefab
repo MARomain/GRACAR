@@ -57,12 +57,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  spawnPoints:
+  scoreToWin: 0
+  startDelay: 0
+  endDelay: 0
+  spawnPointsPlayers:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  spawnPointsChest:
   - {fileID: 0}
   playerInControl: 0
+  chestPrefab: {fileID: 7650028648503359072, guid: 9555a799fb956ba408eed6ce4d4dbf50,
+    type: 3}
   timerBool: 0
   timerText: {fileID: 0}
   gameTimer: 120

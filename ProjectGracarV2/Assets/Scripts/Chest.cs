@@ -120,25 +120,28 @@ public class Chest : MonoBehaviour
             switch (gameManager.playerInControl)
             {
                 case 1:
-                    gameManager.player1Score += scorePerSec = Time.deltaTime;
-                    gameManager.playersScoreText[0].text = gameManager.player1Score.ToString("F0");
+                    gameManager.playerScore[gameManager.playerInControl - 1] += scorePerSec = Time.deltaTime;
+                    gameManager.playersScoreText[gameManager.playerInControl - 1].text = gameManager.playerScore[gameManager.playerInControl - 1].ToString("F0");
                     break;
 
                 case 2:
-                    gameManager.player2Score += scorePerSec = Time.deltaTime;
-                    gameManager.playersScoreText[1].text = gameManager.player2Score.ToString("F0");
+                    gameManager.playerScore[gameManager.playerInControl - 1] += scorePerSec = Time.deltaTime;
+                    gameManager.playersScoreText[gameManager.playerInControl - 1].text = gameManager.playerScore[gameManager.playerInControl - 1].ToString("F0");
                     break;
 
                 case 3:
-                    gameManager.player3Score += scorePerSec = Time.deltaTime;
-                    gameManager.playersScoreText[2].text = gameManager.player3Score.ToString("F0");
+                    gameManager.playerScore[gameManager.playerInControl - 1] += scorePerSec = Time.deltaTime;
+                    gameManager.playersScoreText[gameManager.playerInControl - 1].text = gameManager.playerScore[gameManager.playerInControl - 1].ToString("F0");
                     break;
 
                 case 4:
-                    gameManager.player4Score += scorePerSec = Time.deltaTime;
-                    gameManager.playersScoreText[3].text = gameManager.player4Score.ToString("F0");
+                    gameManager.playerScore[gameManager.playerInControl - 1] += scorePerSec = Time.deltaTime;
+                    gameManager.playersScoreText[gameManager.playerInControl - 1].text = gameManager.playerScore[gameManager.playerInControl - 1].ToString("F0");
                     break;
             }
+
+
+
         }
     }
 }

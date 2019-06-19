@@ -4826,6 +4826,8 @@ GameObject:
   - component: {fileID: 536761360461156209}
   - component: {fileID: 536761360461156208}
   - component: {fileID: 536761360461156207}
+  - component: {fileID: 7380407487036484206}
+  - component: {fileID: 5038006559872601735}
   m_Layer: 0
   m_Name: ChestAnim
   m_TagString: Untagged
@@ -4898,6 +4900,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7380407487036484206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536761360461156206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a785f0574a3fad54e85c829fe82a711e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  currentState: 0
+  numberOfPlayerInChest: 0
+  detectionRange: 3
+  scorePerSec: 3
+--- !u!136 &5038006559872601735
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536761360461156206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &536761360474919170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,7 +5116,7 @@ Animator:
   m_GameObject: {fileID: 536761361069161272}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb7808597784c874a9ec4d0fc95d4b69, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

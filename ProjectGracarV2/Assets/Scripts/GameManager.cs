@@ -12,13 +12,24 @@ public class GameManager : MonoBehaviour
     public float player2Score;
     public float player3Score;
     public float player4Score;
+    public float[] playerScore;
     public TextMeshProUGUI[] playersScoreText;
+    public float scoreToWin;
 
-    [Header("Respawns")]
-    public Transform[] spawnPoints;
+
+    public float startDelay;
+    public float endDelay;
+
+    private WaitForSeconds startWait;
+    private WaitForSeconds endGameWait;
+
+    [Header("Spawns")]
+    public Transform[] spawnPointsPlayers;
+    public Transform[] spawnPointsChest;
 
     [Header("Chest")]
     public int playerInControl;
+    public GameObject chestPrefab;
 
     public bool timerBool;
     public TextMeshProUGUI timerText;
@@ -40,15 +51,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitVar();
+        startWait = new WaitForSeconds(startDelay);
+        endGameWait = new WaitForSeconds(endDelay);
+
         SetTextColors();
+
+        StartCoroutine(GameLoop());
     }
 
-    public void InitVar()
-    {
-        timerBool = true;
-        currentGameTimer = gameTimer;
-    }
+
 
     public void SetTextColors()
     {
@@ -61,10 +72,150 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameTimer();
+        //GameTimer();
         //Swapfloor();
         RestartGame();
+        Debug.Log(MaxScoreReached());
     }
+
+
+    //Code de la game loop : 
+    //StartCoroutine(Gameloop()) dans le Start()
+    //A l'intérieur une Coroutine GameStarting() pour le placement des joueurs etc puis à la fin on return dans la gameloop
+    //Après dans la gameloop on lance une Coroutine GamePlaying() avec le lancement du timer etc début de la game
+    //Toujours dans Gameplaying il faut un While(PersonneAAtteintLeScoreMax) et à l'intérieur if(TimerEnd()) voir gamemanager charlatank
+    //Ca repart dans la Gameloop() et on lance GameEnding() qui va afficher le score à la fin 
+
+
+    public IEnumerator GameLoop()
+    {
+        yield return StartCoroutine(GameStarting());
+
+        yield return StartCoroutine(GamePlaying());
+
+        yield return StartCoroutine(GameEnding());
+
+        StartCoroutine(GameLoop());
+    }
+
+    public IEnumerator GameStarting()
+    {
+        Debug.Log("Game Starting");
+        ResetPlayers();
+        ResetScores();
+        yield return startDelay;
+
+    }
+
+    public IEnumerator GamePlaying()
+    {
+        Debug.Log("Game Playing");
+        StartTimer();
+        SpawnCoffre();
+
+        while (!MaxScoreReached())
+        {
+            GameTimer(); // essayer de merge StartTimer et GameTimer à un moment
+
+            if (TimerEnded())
+                yield return null;
+        }
+    }
+
+    public IEnumerator GameEnding()
+    {
+
+        Debug.Log("Game Ending");
+        yield return endDelay;
+    }
+
+
+
+
+    public void ResetPlayers()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].transform.position = spawnPointsPlayers[i].transform.position;
+            players[i].transform.rotation = spawnPointsPlayers[i].transform.rotation;
+        }
+    }
+
+    public void ResetScores()
+    {
+        for (int i = 0; i < playerScore.Length; i++)
+        {
+            playerScore[i] = 0f;
+            playersScoreText[i].text = "0";
+        } 
+    }
+
+    public void StartTimer()
+    {
+        timerBool = true;
+        currentGameTimer = gameTimer;
+    }
+
+    public void SpawnCoffre()
+    {
+        GameObject chestInstance = Instantiate(chestPrefab, spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)]);
+        //l'intégration avec robin
+    }
+
+
+    public int ChooseSpawnPoint(Transform[] spawnPoints)
+    {
+        return Random.Range(0, spawnPoints.Length);
+    }
+
+
+    private bool MaxScoreReached()
+    {
+        for (int i = 0; i < playerScore.Length; i++)
+        {
+            if (playerScore[i] >= scoreToWin)
+            {
+                return true;
+            }
+        }
+         return false;
+
+        //if (player1Score >= scoreToWin || player2Score >= scoreToWin || player3Score >= scoreToWin || player4Score >= scoreToWin)
+        //{
+        //    return true;
+        //}
+        //else return false;
+        
+    }
+
+    private float WhoWon()
+    {
+        //if (player1Score >= scoreToWin)
+        //    return 1;
+
+        //if (player2Score >= scoreToWin)
+        //    return 2;
+
+        //if (player3Score >= scoreToWin)
+        //    return 3;
+
+        //if (player4Score >= scoreToWin)
+        //    return 4;
+
+        for (int i = 0; i < playerScore.Length; i++)
+        {
+            if(playerScore[i] >= scoreToWin)
+            {
+                return playerScore[i] + 1f;
+            }
+        }
+
+        return 0;
+    }
+
+
+
+
 
 
     //Code du spawn selon 3 étape : 
@@ -81,27 +232,11 @@ public class GameManager : MonoBehaviour
 
     public void Respawn(int playerNumber)
     {
-        players[playerNumber - 1].transform.position = spawnPoints[ChooseSpawnPoint()].position;
+        players[playerNumber - 1].transform.position = spawnPointsPlayers[ChooseSpawnPoint(spawnPointsPlayers)].position;
         players[playerNumber - 1].GetComponent<Controller>().rb.velocity = Vector3.zero;
     }
 
-    public int ChooseSpawnPoint()
-    {
-        return Random.Range(0, spawnPoints.Length);
-    }
-
-    public void UpdateScore()
-    {
-
-    }
-
-
-
-
-
-
-
-
+    
 
 
 
@@ -127,6 +262,16 @@ public class GameManager : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+
+    public bool TimerEnded()
+    {
+        if (currentGameTimer <= 0)
+        {
+            StartCoroutine(GameEnding());
+        }
+        return true;
     }
 
     public void Swapfloor()
