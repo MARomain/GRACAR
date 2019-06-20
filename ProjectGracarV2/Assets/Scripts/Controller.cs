@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
     public bool hasAGun;
     public bool isGrounded;
     public float groundCheckLenght;
+    public Animator animator;
 
 
     [Header("Movement")]
@@ -71,6 +72,7 @@ public class Controller : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
@@ -88,10 +90,10 @@ public class Controller : MonoBehaviour
         bubble = "Bubble" + playerNumber;
 
         //Selection du bon skin
-        currentModel = playerModels[playerNumber - 1];
-        Instantiate(currentModel, this.transform);
+        //currentModel = playerModels[playerNumber - 1];
+        //Instantiate(currentModel, this.transform);
         //Destruction de l'ancienne modé
-        Destroy(dummyModel);
+        //Destroy(dummyModel);
 
     }
 
@@ -174,6 +176,14 @@ public class Controller : MonoBehaviour
 
             rb.MovePosition(transform.position + movement);
         }
+
+        if(Vector3.Distance(transform.position, transform.position + movement) > 0)
+        {
+            animator.SetBool("isRunning", true);
+            Debug.Log(Vector3.Distance(transform.position, transform.position + movement));
+        }
+
+        else animator.SetBool("isRunning", false);
     }
 
     private void Look()
@@ -216,6 +226,7 @@ public class Controller : MonoBehaviour
     public void ActivateBubble()
     {
         isActive = true;
+        animator.SetBool("inBubble", true);
         bubbleGo.SetActive(true);
         //le joueur ne peut plus tirer quand la bulle est active
         weaponScript.canShoot = false;
@@ -245,6 +256,7 @@ public class Controller : MonoBehaviour
     public void DesactivateBubble()
     {
         isActive = false;
+        animator.SetBool("inBubble", false);
         bubbleGo.SetActive(false);
         //le joueur peut à nouveau tirer
         weaponScript.canShoot = true;
@@ -262,7 +274,7 @@ public class Controller : MonoBehaviour
 
             bubbleBool = false;
             //bubbleHealth -= bubbleDamageOnWater;
-            //sliderBubble.value = bubbleHealth;
+            sliderBubble.value = bubbleHealth;
             DesactivateBubble();
         }
     }
