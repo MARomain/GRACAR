@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Chest")]
     public int playerInControl;
-    public GameObject chestPrefab;
+    public GameObject chest;
 
     public bool timerBool;
     public TextMeshProUGUI timerText;
@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour
         //GameTimer();
         //Swapfloor();
         RestartGame();
-        Debug.Log(MaxScoreReached());
     }
 
 
@@ -111,7 +110,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Playing");
         StartTimer();
-        SpawnCoffre();
+        InitCoffre();
 
         while (!MaxScoreReached())
         {
@@ -156,9 +155,11 @@ public class GameManager : MonoBehaviour
         currentGameTimer = gameTimer;
     }
 
-    public void SpawnCoffre()
+    public void InitCoffre()
     {
-        GameObject chestInstance = Instantiate(chestPrefab, spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)]);
+        chest.transform.position = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position;
+        chest.transform.rotation = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].rotation;
+        Debug.Log("position chest");
         //l'intégration avec robin
     }
 

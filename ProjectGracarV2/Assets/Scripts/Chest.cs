@@ -54,9 +54,11 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + " rentre dans la zone du chest");
+
         if (other.gameObject.tag == "Player") // ce check evite juste "NullReferenceException" quand d'autres objets que le joueur touche le collider au if du dessous
         {
+            Debug.Log(other.gameObject.name + " rentre dans la zone du chest");
+
             Controller controller = other.gameObject.GetComponentInParent<Controller>();
             playersInChest.Add(controller);
             numberOfPlayerInChest = playersInChest.Count;
