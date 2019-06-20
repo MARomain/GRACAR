@@ -160,6 +160,7 @@ public class GameManager : MonoBehaviour
         chest.transform.position = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position;
         chest.transform.rotation = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].rotation;
         Debug.Log("position chest");
+        Debug.Log(spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position);
         //l'intégration avec robin
     }
 

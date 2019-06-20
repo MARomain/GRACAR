@@ -1775,14 +1775,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407352471453166450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.69, y: 0, z: -2.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407352472101658181}
   - {fileID: 407352471707216957}
   - {fileID: 407352471009862528}
-  m_Father: {fileID: 407352472447088016}
-  m_RootOrder: 11
+  m_Father: {fileID: 4600612319148609608}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &407352471453166440
 Rigidbody:
@@ -9523,7 +9523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407352472435347561}
   m_LocalRotation: {x: -0, y: -0.15238003, z: -0, w: 0.98832196}
-  m_LocalPosition: {x: 4.7, y: 10, z: 22.2}
+  m_LocalPosition: {x: 8.69, y: 10, z: 14.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407352472106791908}
@@ -9569,7 +9569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407352472447088016}
   m_Layer: 0
-  m_Name: _NeedThisForNewScene (1)
+  m_Name: _NeedThisForNewScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9597,7 +9597,7 @@ Transform:
   - {fileID: 407352472878059253}
   - {fileID: 407352471002814734}
   - {fileID: 407352471413421774}
-  - {fileID: 407352471453166451}
+  - {fileID: 4600612319148609608}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11409,7 +11409,7 @@ MonoBehaviour:
   spawnPointsChest:
   - {fileID: 407352472897277235}
   playerInControl: 0
-  chest: {fileID: 407352472878059252}
+  chest: {fileID: 2018092119009281751}
   timerBool: 0
   timerText: {fileID: 407352472837464477}
   gameTimer: 120
@@ -11484,7 +11484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407352472897277234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.97, y: -4.65, z: -11.29}
+  m_LocalPosition: {x: -1.97, y: -3.26, z: -11.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407352471056523120}
@@ -11804,4 +11804,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 407352471293536415}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2018092119009281751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4600612319148609608}
+  m_Layer: 0
+  m_Name: Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4600612319148609608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018092119009281751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 407352471453166451}
+  m_Father: {fileID: 407352472447088016}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
