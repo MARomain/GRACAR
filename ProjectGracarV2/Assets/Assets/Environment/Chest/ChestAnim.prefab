@@ -5560,7 +5560,6 @@ TrailRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2ba7419d78a5bc04ba4da2218d4b7262, type: 2}
-  - {fileID: 2100000, guid: 2ba7419d78a5bc04ba4da2218d4b7262, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5580,7 +5579,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5610,7 +5609,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 0.5803922}
       key1: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5643,7 +5642,7 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 5
   m_Autodestruct: 1
   m_Emitting: 1
 --- !u!1 &536761361919947355
@@ -5869,7 +5868,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5899,7 +5898,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 0.5803922}
       key1: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5932,7 +5931,7 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 5
   m_Autodestruct: 1
   m_Emitting: 1
 --- !u!1 &536761362295456275
