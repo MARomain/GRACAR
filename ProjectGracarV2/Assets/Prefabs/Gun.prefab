@@ -60,7 +60,7 @@ MonoBehaviour:
   bullet: {fileID: 8481376290186696572, guid: d7177d7fababd12459e094584b846a56, type: 3}
   speed: 20
   gunPoint: {fileID: 5514168932463141817}
-  canShoot: 0
+  canShoot: 1
   fireButton: 
   playerNumber: 1
   spread: {x: 0, y: 0}
