@@ -4,12 +4,70 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Cordes
+    100004: Flag
+    100006: Main
+    100008: Plateforme
+    100010: Voiles
+    100012: Volant
+    100014: Wood
+    100016: Gouvernail
     400000: //RootNode
-    2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: boat1
-  externalObjects: {}
+    400002: Cordes
+    400004: Flag
+    400006: Main
+    400008: Plateforme
+    400010: Voiles
+    400012: Volant
+    400014: Wood
+    400016: Gouvernail
+    2100000: Bateau_MTL
+    2100002: lambert1
+    2100004: Voile_MTL
+    2100006: Flag_MTL
+    2100008: Wood_MTL
+    2300000: Cordes
+    2300002: Flag
+    2300004: Main
+    2300006: Voiles
+    2300008: Volant
+    2300010: Wood
+    2300012: Gouvernail
+    3300000: Cordes
+    3300002: Flag
+    3300004: Main
+    3300006: Voiles
+    3300008: Volant
+    3300010: Wood
+    3300012: Gouvernail
+    4300000: Main
+    4300002: Voiles
+    4300004: Flag
+    4300006: Volant
+    4300008: Cordes
+    4300010: Wood
+    4300012: Gouvernail
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bateau_MTL
+    second: {fileID: 2100000, guid: a3d8da03e81f7f94aa78e59430f066a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flag_MTL
+    second: {fileID: 2100000, guid: c87aa29be1806a645982ff22caa487f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Voile_MTL
+    second: {fileID: 2100000, guid: 77b0298f65354334b8bca0f7e7a79d0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_MTL
+    second: {fileID: 2100000, guid: 9d11f87ed9eb3644da0e8a00e9c076f3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
