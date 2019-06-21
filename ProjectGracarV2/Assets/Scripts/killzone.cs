@@ -33,7 +33,7 @@ public class killzone : MonoBehaviour
             else
             {
                 //Destroy(other.transform.parent.gameObject);
-                gameManager.Respawn(controller.playerNumber);
+                StartCoroutine(gameManager.Respawn(controller.playerNumber, gameManager.spawnDelay));
             }
         }
 

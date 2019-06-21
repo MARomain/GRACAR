@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [Header("Spawns")]
     public Transform[] spawnPointsPlayers;
     public Transform[] spawnPointsChest;
+    public float spawnDelay;
 
     [Header("Chest")]
     public int playerInControl;
@@ -159,8 +160,6 @@ public class GameManager : MonoBehaviour
     {
         chest.transform.position = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position;
         chest.transform.rotation = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].rotation;
-        Debug.Log("position chest");
-        Debug.Log(spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position);
         //l'intégration avec robin
     }
 
@@ -232,13 +231,16 @@ public class GameManager : MonoBehaviour
     //Ca lance une fonction dans le gameManager pour le faire respawn
     //
 
-    public void Respawn(int playerNumber)
+    public IEnumerator Respawn(int playerNumber, float spawnDelay)
     {
+        players[playerNumber - 1].SetActive(false);
+        yield return new WaitForSeconds(spawnDelay);
+        players[playerNumber - 1].SetActive(true);
         players[playerNumber - 1].transform.position = spawnPointsPlayers[ChooseSpawnPoint(spawnPointsPlayers)].position;
         players[playerNumber - 1].GetComponent<Controller>().rb.velocity = Vector3.zero;
     }
 
-    
+
 
 
 

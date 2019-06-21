@@ -84,7 +84,7 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.gameObject.name + " sors de la zone du chest");
+        //Debug.Log(other.gameObject.name + " sors de la zone du chest");
         if (other.gameObject.tag == "Player") // ce check evite juste "NullReferenceException" quand d'autres objets que le joueur touche le collider au if du dessous
         {
             Controller controller = other.gameObject.GetComponentInParent<Controller>();

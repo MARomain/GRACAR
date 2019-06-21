@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 2634287661822243014}
   m_Layer: 9
   m_Name: Idle_run_bulle1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,7 +822,7 @@ Animator:
   m_GameObject: {fileID: 8306779487126386104}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ee03a45546cb2c6458fb4372afbe7412, type: 3}
-  m_Controller: {fileID: 9100000, guid: 46b0ac87fbd16b14f9cb786d74c145c3, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

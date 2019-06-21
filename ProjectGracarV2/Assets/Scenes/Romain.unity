@@ -3309,6 +3309,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2635100623730536180, guid: 8e28c475bf667dd4884e5993dcf04f75,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a18584db7818e5d47811d817747ca14f, type: 3}
     m_RemovedComponents:
     - {fileID: 5488503322628015188, guid: 8e28c475bf667dd4884e5993dcf04f75, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e28c475bf667dd4884e5993dcf04f75, type: 3}
@@ -3623,11 +3628,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
         type: 3}
-      propertyPath: playerScore.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
-        type: 3}
       propertyPath: players.Array.data[0]
       value: 
       objectReference: {fileID: 337941517}
@@ -3693,6 +3693,11 @@ PrefabInstance:
       objectReference: {fileID: 48152223}
     - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
         type: 3}
+      propertyPath: chest
+      value: 
+      objectReference: {fileID: 932838731}
+    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
+        type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 309831738}
@@ -3721,31 +3726,6 @@ PrefabInstance:
       propertyPath: water
       value: 
       objectReference: {fileID: 310203954}
-    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
-        type: 3}
-      propertyPath: gameTimer
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
-        type: 3}
-      propertyPath: scoreToWin
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
-        type: 3}
-      propertyPath: startDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
-        type: 3}
-      propertyPath: endDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421682214482485536, guid: afe88c490be0db64d8b880b2102ba09e,
-        type: 3}
-      propertyPath: chest
-      value: 
-      objectReference: {fileID: 932838731}
     - target: {fileID: 8958726411600174977, guid: afe88c490be0db64d8b880b2102ba09e,
         type: 3}
       propertyPath: m_LocalPosition.x

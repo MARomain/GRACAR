@@ -8,8 +8,11 @@ public class Controller : MonoBehaviour
     [Header("General")]
     public int playerNumber;
     public Color playerColor;
+    public SpriteRenderer direction;
     public GameObject dummyModel;
     public GameObject[] playerModels;
+    public GameObject meshToReskin;
+    public Material[] playerSkins;
     public GameObject currentModel;
     public Rigidbody rb;
     public bool spawnWithGun;
@@ -61,6 +64,8 @@ public class Controller : MonoBehaviour
     private float speed;
     private Vector3 pointContact;
     private Vector3 bounceDirection;
+    public Renderer bubbleRenderer;
+    public Material[] bubbleMat;
 
 
     private string lookX;
@@ -79,7 +84,8 @@ public class Controller : MonoBehaviour
     void Start()
     {
         VarInit();
-        if(spawnWithGun) SpawnWeapon();
+        AttributionBonSkin();
+        if (spawnWithGun) SpawnWeapon();
 
         groundCheckLenght = 0.2f; // distance qui part des pieds du joueurs, longueur raycast
 
@@ -100,6 +106,17 @@ public class Controller : MonoBehaviour
     public void VarInit()
     {
         bubbleTimer = bubbleCd;
+    }
+
+    public void AttributionBonSkin()
+    {
+        bubbleRenderer.material = bubbleMat[playerNumber -1];
+        Material[] matArray = meshToReskin.GetComponent<Renderer>().materials;
+        matArray[1] = playerSkins[playerNumber -1];
+        meshToReskin.GetComponent<Renderer>().materials = matArray;
+
+        //color sprite direction
+        direction.color = playerColor;
     }
 
     public void SpawnWeapon()
@@ -180,7 +197,6 @@ public class Controller : MonoBehaviour
         if(Vector3.Distance(transform.position, transform.position + movement) > 0)
         {
             animator.SetBool("isRunning", true);
-            Debug.Log(Vector3.Distance(transform.position, transform.position + movement));
         }
 
         else animator.SetBool("isRunning", false);
