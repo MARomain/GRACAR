@@ -252,7 +252,7 @@ public class GameManager : MonoBehaviour
 
             float minutes = Mathf.Floor(currentGameTimer / 60);
             float seconds = Mathf.RoundToInt(currentGameTimer % 60);
-            timerText.text = minutes.ToString("F0") + " : " + seconds.ToString("F0");
+            timerText.text = minutes.ToString("F0") + ":" + seconds.ToString("F0");
         }
 
         if (currentGameTimer <= 0)
