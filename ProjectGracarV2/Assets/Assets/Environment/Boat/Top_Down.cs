@@ -6,6 +6,7 @@ public class Top_Down : MonoBehaviour
 {
 
 
+    float TotalFrames = 1800;
 
     Animator Animator;
 
@@ -16,17 +17,27 @@ public class Top_Down : MonoBehaviour
 
         Animator = gameObject.GetComponent<Animator>();
 
-        
+
+        if (TopDown) Animator.SetBool("TopDown", true);
+
+        if (!TopDown) Animator.SetBool("TopDown", false);
+
+
+       // Animator.Play("Boat_Top_Anim", 0, (900f / TotalFrames));
+
+
 
     }
+
+
+
+
 
     // Update is called once per frame
     void Update()
     {
 
-        if (TopDown) Animator.SetBool("TopDown", true);
-
-        if (!TopDown) Animator.SetBool("TopDown", false);
+      
 
     }
 
