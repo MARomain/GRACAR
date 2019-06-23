@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Playing");
         StartTimer();
-        InitCoffre();
+        InitChest();
 
         while (!MaxScoreReached())
         {
@@ -156,8 +156,9 @@ public class GameManager : MonoBehaviour
         currentGameTimer = gameTimer;
     }
 
-    public void InitCoffre()
+    public void InitChest()
     {
+        Debug.Log(spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position);
         chest.transform.position = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].position;
         chest.transform.rotation = spawnPointsChest[ChooseSpawnPoint(spawnPointsChest)].rotation;
         //l'intégration avec robin

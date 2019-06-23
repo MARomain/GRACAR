@@ -19,7 +19,8 @@ public class Player_Attach : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.transform.parent.parent = transform;
+            //other.transform.parent.parent = transform;
+            other.GetComponentInParent<Rigidbody>().position = transform.position;
         }
 
     }
