@@ -64,7 +64,7 @@ MonoBehaviour:
   fireButton: 
   playerNumber: 1
   spread: {x: 0, y: 0}
-  horizontalSpread: 5
+  horizontalSpread: 0
   verticalSpread: 0
   knockbackAmount: 200
   bubbleDamage: 0.1
