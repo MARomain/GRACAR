@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4391129072861856707}
   - component: {fileID: 4391129072863151077}
   - component: {fileID: 4391129072864280869}
+  - component: {fileID: 2407515608428647474}
   m_Layer: 0
   m_Name: TubeMesh2
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &2407515608428647474
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391129072862093283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.97
+  m_Height: 6.1483727
+  m_Direction: 1
+  m_Center: {x: 0.10872415, y: 3.0216742, z: 0.3464591}
 --- !u!1 &4391129072862093285
 GameObject:
   m_ObjectHideFlags: 0
