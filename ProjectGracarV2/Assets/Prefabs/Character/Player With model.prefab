@@ -352,7 +352,7 @@ MonoBehaviour:
   maxBubbleHealth: 3
   sliderBubble: {fileID: 0}
   bubbleHealth: 3
-  regeneration: 0.5
+  regeneration: 0.2
   bubbleDamageOnWater: 1
   isActive: 0
   bubbleGo: {fileID: 6477137082410629543}

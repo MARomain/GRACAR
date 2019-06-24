@@ -229,7 +229,7 @@ public class Controller : MonoBehaviour
     {
         if(bubbleBool)
         {
-            if (Input.GetAxis(bubble) > 0 && isActive == false && bubbleHealth > 0)
+            if (Input.GetAxis(bubble) > 0 && isActive == false && bubbleHealth >= 1)
             {
                 ActivateBubble();
             }
