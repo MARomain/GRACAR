@@ -320,7 +320,7 @@ MonoBehaviour:
   groundCheckLenght: 0
   animator: {fileID: 2635100623726415924}
   doesBubbleStopMovement: 0
-  doesBubbleSlowMovement: 1
+  doesBubbleSlowMovement: 0
   canMove: 1
   moveSpeed: 8
   baseMoveSpeed: 8

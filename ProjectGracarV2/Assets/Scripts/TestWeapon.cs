@@ -13,6 +13,7 @@ public class TestWeapon : Weapon
     private Controller controller;
     public float knockbackAmount;
     public float bubbleDamage;
+    public float destroyTiming;
 
     public TestWeapon(string name,float fireRate, GameObject bullet,float speed, Transform gunPoint, bool canShoot) : base(name,fireRate,bullet, speed, gunPoint, canShoot)
     {
@@ -50,7 +51,7 @@ public class TestWeapon : Weapon
                 Rigidbody instanceRb = bulletInstance.GetComponent<Rigidbody>();
                 instanceRb.AddForce(speed * Time.deltaTime * bulletInstance.transform.forward, ForceMode.Impulse);
 
-                Destroy(bulletInstance, 4f);
+                Destroy(bulletInstance, destroyTiming);
             }
         }
     }

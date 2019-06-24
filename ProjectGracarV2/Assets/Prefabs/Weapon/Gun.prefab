@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: BaseGun
-  fireRate: 0.1
+  fireRate: 0.05
   bullet: {fileID: 8481376290186696572, guid: d7177d7fababd12459e094584b846a56, type: 3}
   speed: 20
   gunPoint: {fileID: 5514168932463141817}
@@ -68,6 +68,7 @@ MonoBehaviour:
   verticalSpread: 0
   knockbackAmount: 200
   bubbleDamage: 0.1
+  destroyTiming: 0.4
 --- !u!114 &751874185
 MonoBehaviour:
   m_ObjectHideFlags: 0
