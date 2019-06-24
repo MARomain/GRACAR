@@ -62,7 +62,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  scoreToWin: 5
+  scoreToWin: 25
   startDelay: 1
   endDelay: 1
   spawnPointsPlayers:

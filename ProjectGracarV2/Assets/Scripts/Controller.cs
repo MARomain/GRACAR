@@ -191,7 +191,8 @@ public class Controller : MonoBehaviour
             movement.Set(horizontalAxisValue, 0f, verticalAxisValue);
             movement = movement * moveSpeed * Time.deltaTime;
 
-            rb.MovePosition(transform.position + movement);
+            //rb.MovePosition(transform.position + movement);
+            transform.Translate(movement,Space.World);
         }
 
         if(Vector3.Distance(transform.position, transform.position + movement) > 0)
@@ -201,6 +202,8 @@ public class Controller : MonoBehaviour
 
         else animator.SetBool("isRunning", false);
     }
+
+    
 
     private void Look()
     {
