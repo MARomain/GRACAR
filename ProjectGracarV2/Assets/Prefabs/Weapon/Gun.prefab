@@ -68,7 +68,7 @@ MonoBehaviour:
   verticalSpread: 0
   knockbackAmount: 200
   bubbleDamage: 0.1
-  destroyTiming: 0.4
+  destroyTiming: 0.8
 --- !u!114 &751874185
 MonoBehaviour:
   m_ObjectHideFlags: 0

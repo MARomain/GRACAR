@@ -49,7 +49,8 @@ public class TestWeapon : Weapon
                 bulletInstance.transform.Rotate(spread.x, spread.y, transform.rotation.z, Space.Self);
 
                 Rigidbody instanceRb = bulletInstance.GetComponent<Rigidbody>();
-                instanceRb.AddForce(speed * Time.deltaTime * bulletInstance.transform.forward, ForceMode.Impulse);
+                //instanceRb.AddForce(speed * bulletInstance.transform.forward, ForceMode.Impulse);
+                instanceRb.velocity = speed * bulletInstance.transform.forward;
 
                 Destroy(bulletInstance, destroyTiming);
             }
