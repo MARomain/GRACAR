@@ -71,12 +71,12 @@ Material:
     - _BumpScale: 1
     - _ColorFresnel: 0.38
     - _Cutoff: 0.5
-    - _Depth: 2.44
+    - _Depth: 1.62
     - _DepthMax: 1
     - _DepthMin: 0.502
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FoamMax: 1
+    - _FoamMax: 0.976
     - _FoamMin: 0.975
     - _FoamPower: 5
     - _Gloss: 0.8
@@ -101,7 +101,7 @@ Material:
     - _UVSec: 0
     - _VertexOffset: 0.75
     - _ZWrite: 1
-    - __CausticsOpacity: 0.312
+    - __CausticsOpacity: 0.3
     - __CausticsThickness: 0.757
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Voile_Wind_MTL
-  m_Shader: {fileID: 4800000, guid: 6876f10a80d8cb04bbaefdd276cbbeba, type: 3}
+  m_Shader: {fileID: 4800000, guid: a18c7b9815c10ab4f8c4adef44433ec4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: cd965fd951ec8f342afd14b11e1df755, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -89,6 +89,18 @@ Material:
     - _WindSpeed: 0.1
     - _WindStrength: 0.02
     - _ZWrite: 1
+    - _b_influence: 1
+    - _branches_disp: 0.3
+    - _leaves_wiggle_disp: 0.07
+    - _leaves_wiggle_speed: 0.01
+    - _r_influence: 0.143
+    - _tree_sway_disp: 1
+    - _tree_sway_speed: 7.99
+    - _tree_sway_stutter: 1.5
+    - _tree_sway_stutter_influence: 0.2
+    - _wind_size: 11.6
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _wind_dir: {r: 0.01, g: 0.04, b: 0.67, a: 0}

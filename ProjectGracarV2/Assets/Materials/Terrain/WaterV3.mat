@@ -99,6 +99,7 @@ Material:
     - _UV2Tiling: 10
     - _UVScale: 20
     - _UVSec: 0
+    - _VertexOffset: 0
     - _ZWrite: 1
     - __CausticsOpacity: 1
     - __CausticsThickness: 0.69
