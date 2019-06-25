@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4499361, g: 0.4972973, b: 0.5610659, a: 1}
+  m_IndirectSpecularColor: {r: 0.44993544, g: 0.49729645, b: 0.56106514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1574,11 +1574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1313199841}
     m_Modifications:
-    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
-        type: 3}
-      propertyPath: m_Name
-      value: Bucket (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 8741853742333149271, guid: 0e004ba0eb96bdd4aaed714a46249015,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1633,6 +1628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -23.663002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
+        type: 3}
+      propertyPath: m_Name
+      value: Bucket (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e004ba0eb96bdd4aaed714a46249015, type: 3}
@@ -3591,11 +3591,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3665,6 +3660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 33.75405
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -5575,11 +5575,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1313199841}
     m_Modifications:
-    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
-        type: 3}
-      propertyPath: m_Name
-      value: Bucket (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 8741853742333149271, guid: 0e004ba0eb96bdd4aaed714a46249015,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5649,6 +5644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5655799
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
+        type: 3}
+      propertyPath: m_Name
+      value: Bucket (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e004ba0eb96bdd4aaed714a46249015, type: 3}
@@ -7401,11 +7401,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7460,6 +7455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -7633,11 +7633,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7707,6 +7702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 26.8137
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -9980,11 +9980,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1313199841}
     m_Modifications:
-    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
-        type: 3}
-      propertyPath: m_Name
-      value: Bucket
-      objectReference: {fileID: 0}
     - target: {fileID: 8741853742333149271, guid: 0e004ba0eb96bdd4aaed714a46249015,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10039,6 +10034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
+        type: 3}
+      propertyPath: m_Name
+      value: Bucket
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e004ba0eb96bdd4aaed714a46249015, type: 3}
@@ -11103,11 +11103,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11162,6 +11157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -13710,11 +13710,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13769,6 +13764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -17237,11 +17237,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17296,6 +17291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -19512,11 +19512,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19586,6 +19581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 35.91587
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -20594,11 +20594,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20653,6 +20648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -23438,11 +23438,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1313199841}
     m_Modifications:
-    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
-        type: 3}
-      propertyPath: m_Name
-      value: Bucket (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8741853742333149271, guid: 0e004ba0eb96bdd4aaed714a46249015,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23497,6 +23492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -62.916004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741853742332664951, guid: 0e004ba0eb96bdd4aaed714a46249015,
+        type: 3}
+      propertyPath: m_Name
+      value: Bucket (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e004ba0eb96bdd4aaed714a46249015, type: 3}
@@ -24220,11 +24220,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24279,6 +24274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -25281,11 +25281,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25340,6 +25335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -52.621002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -25609,11 +25609,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25668,6 +25663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -26532,11 +26532,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26591,6 +26586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -27131,11 +27131,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27190,6 +27185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -27392,11 +27392,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27452,6 +27447,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -99.577
       objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (10)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
 --- !u!1001 &1581563862
@@ -27461,11 +27461,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27521,6 +27516,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 52.536003
       objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
 --- !u!1001 &1583180587
@@ -27530,11 +27530,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27589,6 +27584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -30668,7 +30668,7 @@ PrefabInstance:
     - target: {fileID: 4938961229432868907, guid: 06d8748bc8b1ee0448c14886681dc55d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4938961229432868908, guid: 06d8748bc8b1ee0448c14886681dc55d,
         type: 3}
@@ -32487,11 +32487,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32556,6 +32551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 45.000027
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
@@ -35029,11 +35029,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 149626271}
     m_Modifications:
-    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
-        type: 3}
-      propertyPath: m_Name
-      value: Torch (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 5218957560481523178, guid: 9814787613d151c48844b7a0e07ee10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35088,6 +35083,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218957560481523179, guid: 9814787613d151c48844b7a0e07ee10e,
+        type: 3}
+      propertyPath: m_Name
+      value: Torch (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9814787613d151c48844b7a0e07ee10e, type: 3}
@@ -37637,11 +37637,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37712,6 +37707,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 26.89065
       objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
 --- !u!4 &2112307701 stripped
@@ -37727,11 +37727,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2090594954}
     m_Modifications:
-    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
-        type: 3}
-      propertyPath: m_Name
-      value: Barrel (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 5512871029072239588, guid: 9b865a4438c27c64b99c269596da8500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37791,6 +37786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 50.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512871029072136132, guid: 9b865a4438c27c64b99c269596da8500,
+        type: 3}
+      propertyPath: m_Name
+      value: Barrel (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b865a4438c27c64b99c269596da8500, type: 3}
