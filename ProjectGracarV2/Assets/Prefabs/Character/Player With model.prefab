@@ -338,6 +338,7 @@ MonoBehaviour:
   moveSpeed: 8
   baseMoveSpeed: 8
   moveSpeedBubble: 2
+  maxKnockBack: 100
   canLook: 1
   rotationSpeed: 35
   bubbleRef: {fileID: 0}
@@ -519,7 +520,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f944fcd32a027934fab54dd28ff39e89, type: 2}
+      objectReference: {fileID: 9100000, guid: b528350ad512181458f97cebd92bd61f, type: 2}
+    - target: {fileID: 8306779487118951980, guid: a97ead29dbfaef14ca36c93be69307cb,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: d59c2c5a30244214cb6a15e660078f17, type: 3}
     - target: {fileID: 2634287661822243014, guid: a97ead29dbfaef14ca36c93be69307cb,
         type: 3}
       propertyPath: m_Enabled

@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: b7237775edb14be488bb692b78c91af9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ' 1'
+    100002: //RootNode
+    100004: Clown
+    100006: ClownHead
+    100008: ClownLArm21
+    100010: ClownLArm22
+    100012: ClownLArmCollarbone
+    100014: ClownLArmDigit01
+    100016: ClownLArmDigit02
+    100018: ClownLArmDigit03
+    100020: ClownLArmDigit21
+    100022: ClownLArmDigit22
+    100024: ClownLArmDigit23
+    100026: ClownLArmPalm
+    100028: ClownLLeg1
+    100030: ClownLLeg2
+    100032: ClownLLegAnkle
+    100034: ClownLLegDigit01
+    100036: ClownLLegPlatform
+    100038: ClownNeck1
+    100040: ClownNeck2
+    100042: ClownPelvis
+    100044: ClownRArm1
+    100046: ClownRArm21
+    100048: ClownRArm22
+    100050: ClownRArmCollarbone
+    100052: ClownRArmDigit01
+    100054: ClownRArmDigit02
+    100056: ClownRArmDigit03
+    100058: ClownRArmDigit21
+    100060: ClownRArmDigit22
+    100062: ClownRArmDigit23
+    100064: ClownRArmPalm
+    100066: ClownRibcage
+    100068: ClownRLeg1
+    100070: ClownRLeg2
+    100072: ClownRLegAnkle
+    100074: ClownRLegDigit01
+    100076: ClownRLegPlatform
+    100078: ClownSpine1
+    100080: ClownSpine2
+    100082: ClownSpine3
+    100084: ID
+    100086: J1
+    100088: weapon
+    400000: ' 1'
+    400002: //RootNode
+    400004: Clown
+    400006: ClownHead
+    400008: ClownLArm21
+    400010: ClownLArm22
+    400012: ClownLArmCollarbone
+    400014: ClownLArmDigit01
+    400016: ClownLArmDigit02
+    400018: ClownLArmDigit03
+    400020: ClownLArmDigit21
+    400022: ClownLArmDigit22
+    400024: ClownLArmDigit23
+    400026: ClownLArmPalm
+    400028: ClownLLeg1
+    400030: ClownLLeg2
+    400032: ClownLLegAnkle
+    400034: ClownLLegDigit01
+    400036: ClownLLegPlatform
+    400038: ClownNeck1
+    400040: ClownNeck2
+    400042: ClownPelvis
+    400044: ClownRArm1
+    400046: ClownRArm21
+    400048: ClownRArm22
+    400050: ClownRArmCollarbone
+    400052: ClownRArmDigit01
+    400054: ClownRArmDigit02
+    400056: ClownRArmDigit03
+    400058: ClownRArmDigit21
+    400060: ClownRArmDigit22
+    400062: ClownRArmDigit23
+    400064: ClownRArmPalm
+    400066: ClownRibcage
+    400068: ClownRLeg1
+    400070: ClownRLeg2
+    400072: ClownRLegAnkle
+    400074: ClownRLegDigit01
+    400076: ClownRLegPlatform
+    400078: ClownSpine1
+    400080: ClownSpine2
+    400082: ClownSpine3
+    400084: ID
+    400086: J1
+    400088: weapon
+    2100000: verre
+    2100002: metal
+    2100004: lambert1
+    2100006: Bois
+    2100008: lambert9
+    2100010: bouchon1
+    2100012: vide
+    2100014: lambert5
+    2100016: P1
+    2300000: ID
+    3300000: ID
+    4300000: ID
+    4300002: J1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: J1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

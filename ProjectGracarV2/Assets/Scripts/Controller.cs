@@ -30,6 +30,7 @@ public class Controller : MonoBehaviour
     public float baseMoveSpeed;
     public float moveSpeedBubble;
     private Vector3 movement;
+    public float maxKnockBack;
 
     [Header("Look")]
     public bool canLook = true;
@@ -138,6 +139,7 @@ public class Controller : MonoBehaviour
         BubbleCd();
         RegeneRateBubble();
         CheckGrounded();
+        MaxKnockBack();
 
         //for (int i = 1; i < 5; i++)
         //{
@@ -152,6 +154,16 @@ public class Controller : MonoBehaviour
         //}
     }
 
+    public void MaxKnockBack()
+    {
+        if(rb.velocity.magnitude > maxKnockBack)
+        {
+            rb.velocity = rb.velocity.normalized * maxKnockBack;
+        }
+
+    }
+
+
     public void CheckGrounded()
     {
         Vector3 origin = transform.position + new Vector3(0f, 0.8f, 0f);
@@ -161,9 +173,14 @@ public class Controller : MonoBehaviour
         if (Physics.Raycast(origin, Vector3.down, distance, 9)) //oblige de faire partir le raycast d'un peu au dessus, sinon il part depuis les pieds et a pas le temps de toucher le sol
         {
             isGrounded = true;
+            animator.SetBool("isFalling", false);
         }
 
-        else isGrounded = false;
+        else
+        {
+            isGrounded = false;
+            animator.SetBool("isFalling", true);
+        }
     }
 
     private void FixedUpdate()
@@ -187,6 +204,8 @@ public class Controller : MonoBehaviour
             float verticalAxisValue = Input.GetAxis(moveY);
             float horizontalAxisValue = Input.GetAxis(moveX);
 
+            animator.SetFloat("DirX", horizontalAxisValue);
+            animator.SetFloat("DirY", verticalAxisValue);
 
             movement.Set(horizontalAxisValue, 0f, verticalAxisValue);
             movement = movement * moveSpeed * Time.deltaTime;

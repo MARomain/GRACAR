@@ -1,96 +1,96 @@
 fileFormatVersion: 2
-guid: ee03a45546cb2c6458fb4372afbe7412
+guid: d59c2c5a30244214cb6a15e660078f17
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: ' 1'
-    100002: Clown
-    100004: ClownHead
-    100006: ClownLArm21
-    100008: ClownLArm22
-    100010: ClownLArmCollarbone
-    100012: ClownLArmDigit01
-    100014: ClownLArmDigit02
-    100016: ClownLArmDigit03
-    100018: ClownLArmDigit21
-    100020: ClownLArmDigit22
-    100022: ClownLArmDigit23
-    100024: ClownLArmPalm
-    100026: ClownLLeg1
-    100028: ClownLLeg2
-    100030: ClownLLegAnkle
-    100032: ClownLLegDigit01
-    100034: ClownLLegPlatform
-    100036: ClownNeck1
-    100038: ClownNeck2
-    100040: ClownPelvis
-    100042: ClownRArm1
-    100044: ClownRArm21
-    100046: ClownRArm22
-    100048: ClownRArmCollarbone
-    100050: ClownRArmDigit01
-    100052: ClownRArmDigit02
-    100054: ClownRArmDigit03
-    100056: ClownRArmDigit21
-    100058: ClownRArmDigit22
-    100060: ClownRArmDigit23
-    100062: ClownRArmPalm
-    100064: ClownRibcage
-    100066: ClownRLeg1
-    100068: ClownRLeg2
-    100070: ClownRLegAnkle
-    100072: ClownRLegDigit01
-    100074: ClownRLegPlatform
-    100076: ClownSpine1
-    100078: ClownSpine2
-    100080: ClownSpine3
-    100082: ID
-    100084: //RootNode
+    100002: //RootNode
+    100004: Clown
+    100006: ClownHead
+    100008: ClownLArm21
+    100010: ClownLArm22
+    100012: ClownLArmCollarbone
+    100014: ClownLArmDigit01
+    100016: ClownLArmDigit02
+    100018: ClownLArmDigit03
+    100020: ClownLArmDigit21
+    100022: ClownLArmDigit22
+    100024: ClownLArmDigit23
+    100026: ClownLArmPalm
+    100028: ClownLLeg1
+    100030: ClownLLeg2
+    100032: ClownLLegAnkle
+    100034: ClownLLegDigit01
+    100036: ClownLLegPlatform
+    100038: ClownNeck1
+    100040: ClownNeck2
+    100042: ClownPelvis
+    100044: ClownRArm1
+    100046: ClownRArm21
+    100048: ClownRArm22
+    100050: ClownRArmCollarbone
+    100052: ClownRArmDigit01
+    100054: ClownRArmDigit02
+    100056: ClownRArmDigit03
+    100058: ClownRArmDigit21
+    100060: ClownRArmDigit22
+    100062: ClownRArmDigit23
+    100064: ClownRArmPalm
+    100066: ClownRibcage
+    100068: ClownRLeg1
+    100070: ClownRLeg2
+    100072: ClownRLegAnkle
+    100074: ClownRLegDigit01
+    100076: ClownRLegPlatform
+    100078: ClownSpine1
+    100080: ClownSpine2
+    100082: ClownSpine3
+    100084: ID
     100086: J1
     100088: weapon
     400000: ' 1'
-    400002: Clown
-    400004: ClownHead
-    400006: ClownLArm21
-    400008: ClownLArm22
-    400010: ClownLArmCollarbone
-    400012: ClownLArmDigit01
-    400014: ClownLArmDigit02
-    400016: ClownLArmDigit03
-    400018: ClownLArmDigit21
-    400020: ClownLArmDigit22
-    400022: ClownLArmDigit23
-    400024: ClownLArmPalm
-    400026: ClownLLeg1
-    400028: ClownLLeg2
-    400030: ClownLLegAnkle
-    400032: ClownLLegDigit01
-    400034: ClownLLegPlatform
-    400036: ClownNeck1
-    400038: ClownNeck2
-    400040: ClownPelvis
-    400042: ClownRArm1
-    400044: ClownRArm21
-    400046: ClownRArm22
-    400048: ClownRArmCollarbone
-    400050: ClownRArmDigit01
-    400052: ClownRArmDigit02
-    400054: ClownRArmDigit03
-    400056: ClownRArmDigit21
-    400058: ClownRArmDigit22
-    400060: ClownRArmDigit23
-    400062: ClownRArmPalm
-    400064: ClownRibcage
-    400066: ClownRLeg1
-    400068: ClownRLeg2
-    400070: ClownRLegAnkle
-    400072: ClownRLegDigit01
-    400074: ClownRLegPlatform
-    400076: ClownSpine1
-    400078: ClownSpine2
-    400080: ClownSpine3
-    400082: ID
-    400084: //RootNode
+    400002: //RootNode
+    400004: Clown
+    400006: ClownHead
+    400008: ClownLArm21
+    400010: ClownLArm22
+    400012: ClownLArmCollarbone
+    400014: ClownLArmDigit01
+    400016: ClownLArmDigit02
+    400018: ClownLArmDigit03
+    400020: ClownLArmDigit21
+    400022: ClownLArmDigit22
+    400024: ClownLArmDigit23
+    400026: ClownLArmPalm
+    400028: ClownLLeg1
+    400030: ClownLLeg2
+    400032: ClownLLegAnkle
+    400034: ClownLLegDigit01
+    400036: ClownLLegPlatform
+    400038: ClownNeck1
+    400040: ClownNeck2
+    400042: ClownPelvis
+    400044: ClownRArm1
+    400046: ClownRArm21
+    400048: ClownRArm22
+    400050: ClownRArmCollarbone
+    400052: ClownRArmDigit01
+    400054: ClownRArmDigit02
+    400056: ClownRArmDigit03
+    400058: ClownRArmDigit21
+    400060: ClownRArmDigit22
+    400062: ClownRArmDigit23
+    400064: ClownRArmPalm
+    400066: ClownRibcage
+    400068: ClownRLeg1
+    400070: ClownRLeg2
+    400072: ClownRLegAnkle
+    400074: ClownRLegDigit01
+    400076: ClownRLegPlatform
+    400078: ClownSpine1
+    400080: ClownSpine2
+    400082: ClownSpine3
+    400084: ID
     400086: J1
     400088: weapon
     2100000: verre
@@ -106,9 +106,10 @@ ModelImporter:
     3300000: ID
     4300000: ID
     4300002: J1
-    7400000: Idle
-    7400002: Run
-    7400004: Bubble
+    7400000: Marche Arriere
+    7400002: Pas chasse
+    7400004: Falling
+    7400006: Pas chasse2
     9500000: //RootNode
     13700000: J1
     2186277476908879412: ImportLogs
@@ -131,7 +132,9 @@ ModelImporter:
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
       improve retargeting quality.\n\t'ClownRibcage' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'ClownNeck2' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n"
+      humanoid transforms and has rotation animation that will be discarded.\n\t'ClownLArm22'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ClownRArm22'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -145,10 +148,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Marche Arriere
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 10
+      firstFrame: 61
+      lastFrame: 86
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -173,10 +176,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Run
+      name: Pas chasse
       takeName: Take 001
-      firstFrame: 11
-      lastFrame: 35
+      firstFrame: 87
+      lastFrame: 110
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -201,17 +204,45 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Bubble
+      name: Falling
       takeName: Take 001
-      firstFrame: 37
-      lastFrame: 60
+      firstFrame: 111
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Pas chasse2
+      takeName: Take 001
+      firstFrame: 87
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -263,7 +294,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
-  copyAvatar: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human:
@@ -540,18 +571,18 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Idle_run_bulle1(Clone)
+    - name: back_cote_vol(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Clown
-      parentName: Idle_run_bulle1(Clone)
+      parentName: back_cote_vol(Clone)
       position: {x: 0.014404048, y: 0, z: 0.008138257}
       rotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
       scale: {x: 1, y: 1, z: 1}
     - name: ClownPelvis
-      parentName: Idle_run_bulle1(Clone)
+      parentName: back_cote_vol(Clone)
       position: {x: 0.014404086, y: 0.8700619, z: -0.1338586}
       rotation: {x: 0.36879596, y: -0.39634436, z: -0.5727406, w: 0.6155232}
       scale: {x: 1, y: 1, z: 1}
@@ -751,17 +782,17 @@ ModelImporter:
       rotation: {x: 0.09029061, y: 0.031189881, z: 0.095788315, w: 0.9908075}
       scale: {x: 1, y: 0.9999997, z: 0.9999998}
     - name: ClownLLegPlatform
-      parentName: Idle_run_bulle1(Clone)
+      parentName: back_cote_vol(Clone)
       position: {x: -0.21655625, y: -0.0000000033082292, z: 0.14203528}
       rotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
       scale: {x: 1, y: 1, z: 1}
     - name: ClownRLegPlatform
-      parentName: Idle_run_bulle1(Clone)
+      parentName: back_cote_vol(Clone)
       position: {x: 0.27789742, y: -0.000000003308242, z: -0.12672052}
       rotation: {x: 0.29647645, y: -0.29647636, z: -0.64195144, w: 0.6419516}
       scale: {x: 1, y: 1, z: 1}
     - name: J1
-      parentName: Idle_run_bulle1(Clone)
+      parentName: back_cote_vol(Clone)
       position: {x: 0.016429586, y: 0.9629733, z: 0.00039707197}
       rotation: {x: 2.0046901e-35, y: 3.5035963e-26, z: -5.721807e-10, w: 1}
       scale: {x: 0.26442942, y: 0.26442942, z: 0.26442942}
@@ -776,8 +807,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: ee03a45546cb2c6458fb4372afbe7412,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0

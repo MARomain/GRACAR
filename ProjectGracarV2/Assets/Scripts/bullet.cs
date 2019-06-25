@@ -5,7 +5,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
 
-    Vector3 knockBackDirection;
+    public Vector3 knockBackDirection;
     private Rigidbody rb;
     private float knockbackAmount;
     private float bubbleDamage;
@@ -61,8 +61,8 @@ public class bullet : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 Rigidbody targetRb = collision.gameObject.GetComponentInParent<Rigidbody>();
-                Debug.DrawRay(contact.point, contact.normal * 10f, Color.red, 100f);
-                knockBackDirection = -contact.normal;
+                Debug.DrawRay(contact.point, contact.normal * 10f, Color.red, 8f);
+                knockBackDirection = transform.forward;
                 targetRb.AddForce(knockBackDirection.normalized * knockbackAmount);
             }
 
