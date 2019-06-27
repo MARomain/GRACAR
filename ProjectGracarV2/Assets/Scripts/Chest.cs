@@ -11,17 +11,25 @@ public class Chest : MonoBehaviour
     List<Controller> playersInChest = new List<Controller>();
     public float detectionRange;
     public float scorePerSec;
+    public AudioSource audiosource;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //CheckPlayers();
+        //if (gameManager.playerInControl > 0)
+        //{
+        //    audiosource.Play();
+        //}
+        //else audiosource.Stop();
     }
 
 
@@ -68,6 +76,7 @@ public class Chest : MonoBehaviour
                 case chestState.free:
                     currentState = chestState.controlled;
                     gameManager.playerInControl = controller.playerNumber;
+                    audiosource.Play();
                     break;
 
                 case chestState.contested:
@@ -75,6 +84,7 @@ public class Chest : MonoBehaviour
 
                     case chestState.controlled:
                     currentState = chestState.contested;
+                    audiosource.Stop();
                     gameManager.playerInControl = 0;    //le point devient contester, 0 signifie que personne n'a le point
                     break;
             }
@@ -100,6 +110,7 @@ public class Chest : MonoBehaviour
                     if(numberOfPlayerInChest == 1)
                     {
                         currentState = chestState.controlled;
+                        audiosource.Play();
                         gameManager.playerInControl = playersInChest[0].playerNumber;
                     }
                     break;
@@ -108,6 +119,7 @@ public class Chest : MonoBehaviour
                     if (numberOfPlayerInChest <= 0)
                     {
                         currentState = chestState.free;
+                        audiosource.Stop();
                         gameManager.playerInControl = 0;    //le point redevient free, 0 signifie que personne n'a le point
                     }
                     break;

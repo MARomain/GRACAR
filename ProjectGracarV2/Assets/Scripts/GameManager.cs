@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 public class GameManager : MonoBehaviour
 {
@@ -49,9 +50,19 @@ public class GameManager : MonoBehaviour
     public float timeChangeFloor = 2f;
     public float currentTime = 0f;
 
+
+    [Header("EndGame")]
+    public GameObject endGameCanvas;
+    public PostProcessingProfile pppMenu;
+    public Transform[] endPointScorePos;
+    public GameObject[] stuffToHide;
+
     // Start is called before the first frame update
     void Start()
     {
+        ResetScores();
+        Time.timeScale = 1f;
+
         startWait = new WaitForSeconds(startDelay);
         endGameWait = new WaitForSeconds(endDelay);
 
@@ -100,9 +111,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameStarting()
     {
+        Time.timeScale = 1f;
+
         Debug.Log("Game Starting");
         ResetPlayers();
-        ResetScores();
+        //ResetScores();
         yield return startDelay;
 
     }
@@ -124,8 +137,36 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameEnding()
     {
-
         Debug.Log("Game Ending");
+        Time.timeScale = 0;
+        endGameCanvas.SetActive(true);
+        for (int i = 0; i < playersScoreText.Length; i++)
+        {
+            playersScoreText[i].transform.position = endPointScorePos[i].position;
+        }
+
+        for (int i = 0; i < stuffToHide.Length; i++)
+        {
+            stuffToHide[i].gameObject.SetActive(false);
+        }
+
+        cam.GetComponent<PostProcessingBehaviour>().profile = pppMenu;
+
+        
+            for (int i = 0; i < 20; i++)
+            {
+                if (Input.GetKeyDown("joystick 1 button " + i))
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
+            }
+
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
+
+
         yield return endDelay;
     }
 
@@ -145,6 +186,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < playerScore.Length; i++)
         {
+            print("score 0");
             playerScore[i] = 0f;
             playersScoreText[i].text = "0";
         } 
@@ -265,7 +307,7 @@ public class GameManager : MonoBehaviour
             //currentGameTimer = gameTimer;
             //timerText.text = "0s";
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

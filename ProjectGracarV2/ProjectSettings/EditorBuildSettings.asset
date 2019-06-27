@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_Iteration_01.unity
     guid: e78ec35c5bd2f6c4b9abefff657350a5
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 09b7e23616afff44faf9f42c40578693
+  - enabled: 1
     path: Assets/Scenes/LEVEL BATEAU BACKUP.unity
     guid: 9a45e8b3fd38b61478a2bcc58a55e853
   m_configObjects: {}
