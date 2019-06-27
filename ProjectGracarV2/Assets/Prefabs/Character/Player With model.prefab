@@ -373,6 +373,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6157301344123823711}
     m_Modifications:
+    - target: {fileID: 100002, guid: 28a5e79925e3ce04a82856c16a572cbe, type: 3}
+      propertyPath: m_Name
+      value: BlobShadowProjector
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 28a5e79925e3ce04a82856c16a572cbe, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 28a5e79925e3ce04a82856c16a572cbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -417,14 +425,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 28a5e79925e3ce04a82856c16a572cbe, type: 3}
-      propertyPath: m_Name
-      value: BlobShadowProjector
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 28a5e79925e3ce04a82856c16a572cbe, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 11900000, guid: 28a5e79925e3ce04a82856c16a572cbe, type: 3}
       propertyPath: m_FieldOfView
       value: 30
@@ -456,6 +456,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6157301344123823711}
     m_Modifications:
+    - target: {fileID: 8306779487126386104, guid: a97ead29dbfaef14ca36c93be69307cb,
+        type: 3}
+      propertyPath: m_Name
+      value: Idle_run_bulle1
+      objectReference: {fileID: 0}
     - target: {fileID: 8306779487126481304, guid: a97ead29dbfaef14ca36c93be69307cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,11 +515,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8306779487126386104, guid: a97ead29dbfaef14ca36c93be69307cb,
-        type: 3}
-      propertyPath: m_Name
-      value: Idle_run_bulle1
       objectReference: {fileID: 0}
     - target: {fileID: 8306779487118951980, guid: a97ead29dbfaef14ca36c93be69307cb,
         type: 3}

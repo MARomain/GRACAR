@@ -14,6 +14,7 @@ public class TestWeapon : Weapon
     public float knockbackAmount;
     public float bubbleDamage;
     public float destroyTiming;
+    public GameObject jetdeau;
 
     public TestWeapon(string name,float fireRate, GameObject bullet,float speed, Transform gunPoint, bool canShoot) : base(name,fireRate,bullet, speed, gunPoint, canShoot)
     {
@@ -30,6 +31,16 @@ public class TestWeapon : Weapon
     void Update()
     {
         Shoot();
+
+        if(Input.GetAxis(fireButton) > 0)
+        {
+            jetdeau.SetActive(true);
+        }
+        else
+        {
+            jetdeau.SetActive(false);
+        }
+
     }
 
     public override void Shoot()
@@ -42,7 +53,7 @@ public class TestWeapon : Weapon
             if (Input.GetAxis(fireButton) > 0 && Time.time > nextFire)
             {
                 nextFire = Time.time + fireRate;
-
+                
                 GameObject bulletInstance = Instantiate(bullet, gunPoint.position, gunPoint.rotation);
 
                 bulletInstance.GetComponent<bullet>().Initialize(knockbackAmount, bubbleDamage);
